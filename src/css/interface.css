@@ -1,0 +1,1092 @@
+/*
+ * TRY Brush effect on author in header.
+ * TRY https://codepen.io/Sirvasile/pen/VyPONq?sort_col=item_updated_at.
+ * TRY An hamburger menu (Apple style) for the header and the footer on mobile resolutions.
+ * TRY A ribbon as background in main.
+ * TRY Use Mockupeditor designs, like coffee for donation.
+ * TRY Add bag o chips from Mockupeditor.
+ * TRY Swap author and title position.
+*/
+
+/*
+ * HOW TO Responsive header and not fixed height: just set the height and overflow hidden to .stream.
+*/
+
+/*
+ * @modifier no-select
+ * @desc Makes an element unselectable.
+*/
+
+.--no-select {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/*
+ * @component container
+ * @desc A generic container: it should be overwritten by other UI components for specific cases.
+*/
+
+.container {
+    
+}
+
+/*
+ * @component article
+*/
+
+.article {
+    width: 96%;
+    max-width: 773px;
+    margin: 0;
+    padding: 25px;
+    background-color: rgb(255, 255, 255);
+}
+.article--spaced {
+    margin: 23px 0 47px 0;
+}
+.article--expanded {
+    max-width: 923px;
+}
+.article + .side-bar {
+    margin-left: 70px;
+}
+.article .image {
+    border-radius: 6px;
+}
+.article * + .image {
+    margin-top: 17px;
+}
+
+/*
+ * @component side-bar
+*/
+
+.side-bar {
+    width: 96%;
+    max-width: 346px;
+    margin: 25px;
+    padding: 0;
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px 10px 0 0;
+    transform: translateY(-81px);
+    z-index: 2;
+}
+.side-bar .section {
+    width: 100%;
+}
+.side-bar > .section:first-child {
+    border-radius: 6px 6px 0 0;
+}
+.side-bar--dimensional {
+    perspective: 1000px;
+}
+.side-bar--dimensional .section {
+    transform: rotateY(-8deg);
+}
+
+/*
+ * @component feed
+*/
+
+.feed {
+    padding: 17px 20px;
+}
+.feed + .feed {
+    padding-top: 0;
+}
+.feed + .feed::before {
+    content: "";
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    border-top: 1px dashed rgb(151, 151, 151);
+    opacity: 0.5;
+}
+.feed h4.title {
+    font-size: 15px;
+    color: rgb(42, 42, 40);
+}
+.feed .meta {
+    margin: 5px 0 0 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(102, 101, 102);
+}
+.feed .paragraph {
+    margin: 0;
+    font-size: 15px;
+    color: rgb(31, 31, 32);
+}
+.feed * + .paragraph {
+    margin-top: 5px;
+}
+.feed .link {
+    color: inherit;
+}
+.feed .link:hover {
+    text-decoration: none;
+}
+
+/*
+ * @component section
+*/
+
+
+.section {
+    
+}
+* + .section {
+    margin-top: 24px;
+}
+.section--prototype {
+    background-image: linear-gradient(to top right, rgb(246, 246, 246), rgb(236, 236, 236));
+    box-shadow: inset 0 0 6px 1px rgba(0, 0, 0, 0.008), 2px 1px 14px 2px rgba(1, 1, 1, 0.0092);
+}
+.section--chips {
+    margin-top: 61px;
+}
+.section--chips > .feed:first-child > .image:first-child  {
+    -webkit-user-select: none;
+    user-select: none;
+    margin: -40px auto 1px auto;
+    width: 206px;
+    height: auto;
+}
+
+/*
+ * @component title
+*/
+
+.title {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -0.06rem;
+    color: rgb(0, 0, 0);
+}
+h1.title {
+    line-height: 1.2;
+}
+h1.title + .paragraph {
+    margin-top: 23px;
+}
+h2.title {
+    margin-bottom: 12px;
+    font-size: 29px;
+}
+h2.title::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 21px 0 16px 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom left, rgba(200, 200, 201, 0.3), rgba(210, 211, 210, 0.6));
+    border-radius: 23%;
+}
+h3.title {
+    margin: 11px 0 6px 0;
+    font-size: 22px;
+}
+
+/*
+ * @component paragraph
+*/
+
+.paragraph {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.04rem;
+    color: rgb(24, 24, 24);
+}
+.paragraph + .paragraph {
+    margin-top: 24px;
+}
+.paragraph--abstract::before {
+    content: "Abstract. ";
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: 600;
+    color: inherit;
+}
+
+/*
+ * @component meta
+*/
+
+.meta {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+
+/*
+ * @component separator
+*/
+
+.separator {
+    margin: 46px 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-top: 1px dashed rgba(200, 200, 200, 0.68);
+}
+
+/*
+ * @component pre
+*/
+
+.pre {
+    overflow-x: scroll;
+    width: 100%;
+    margin: 23px 0;
+    padding: 18px 25px;
+    font-family: "Courier";
+    font-size: 15px;
+}
+
+/*
+ * @component highlight
+*/
+
+.highlight {
+    margin: 0;
+    padding: 1px 5px;
+    background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.078));
+    box-shadow: inset 0 0 6px 1px rgba(0, 0, 0, 0.021), 0 1px 8px 2px rgba(1, 1, 1, 0.0092);
+    border-radius: 3px;
+    font-family: "Courier";
+}
+
+/*
+ * @component header
+*/
+
+.header {
+    overflow: hidden;
+    position: relative;
+    height: 428px;
+    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(-182deg, rgb(0, 0, 0) 70%, rgba(43, 43, 43, 0.04));
+}
+.header > .container:first-child,
+.header > .stream {
+    max-width: 1422px;
+    margin: 0 auto;
+}
+.header > .container > .nav {
+    background-color: rgb(0, 0, 0);
+}
+.header > .container > .nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -38px;
+    width: 100%;
+	height: 38px;
+	margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to top, transparent, rgb(0, 0, 0));
+}
+.header .nav__item {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgb(240, 240, 240);
+}
+.header > .stream {
+    /*
+        background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(38, 38, 38));
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    */
+}
+.header > .stream > .stream__text:nth-child(1) {
+    left: -87px;
+}
+.header > .stream > .stream__text:nth-child(2) {
+    right: 63px;
+}
+.header .stream__text {
+    opacity: 0.42;
+}
+.header--terminator {
+    background-image:
+        linear-gradient(-182deg, rgba(0, 0, 0, 0.83) 70%, rgba(43, 43, 43, 0.04)),
+        url("../images/terminator.jpg");
+    background-size: auto, auto 100%;
+    background-repeat: repeat, no-repeat;
+}
+.header--triangle::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border-style: solid;
+	border-width: 0 0 42px 100vw;
+	border-color: transparent transparent rgb(255, 255, 255) transparent;
+	z-index: 1;
+}
+
+/*
+ * @component author
+*/
+
+.author {
+    position: absolute;
+    left: 0;
+    bottom: 146px;
+    margin: 0;
+    padding: 20px;
+    background-color: transparent;
+    z-index: 1;
+}
+.author * {
+    cursor: default;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.author > .image {
+    margin: 0;
+    padding: 0;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    box-shadow: 0 0 13px 3px rgb(0, 0, 0);
+}
+.author > .paragraph {
+    max-width: 573px;
+    margin: 0;
+    padding: 6px 24px;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    text-shadow:
+        0 0 4px rgb(0, 0, 0),
+        0 0 8px rgb(0, 0, 0),
+        0 0 14px rgb(0, 0, 0),
+        0 0 20px rgb(0, 0, 0);
+    color: rgb(234, 234, 234);
+}
+
+/*
+ * @component main
+*/
+
+.main {
+    background-color: rgb(255, 255, 255);
+}
+
+/*
+ * @component stream
+*/
+
+.stream {
+    overflow: hidden;
+    position: relative;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    perspective: 1100px;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+.stream__text {
+    cursor: default;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Use fixed for a parallax effect (with a lot of bugs); use absolute for a static effect. */
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    /* TODO Decrease font-size for lower resolutions in order to fit the screen (maybe using media query). */
+    font-size: 12px;
+    font-family: "Courier";
+    color: rgb(223, 223, 223);
+}
+/* Used for the header animation. */
+.stream__text--repeat-y {
+    will-change: transform;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: stream__text--movement;
+    text-shadow: 0 -323px 0 rgb(223, 223, 223);
+    transform: rotateY(45deg) translateY(0);
+}
+@keyframes stream__text--movement {
+    0% {
+        transform: rotateY(45deg) translateY(0);
+    }
+    100% {
+        transform: rotateY(45deg) translateY(323px);
+    }
+}
+.stream__text--reverse {
+    animation-name: stream__text--movement-reverse;
+    transform: rotateY(-45deg) translateY(0);
+}
+@keyframes stream__text--movement-reverse {
+    0% {
+        transform: rotateY(-45deg) translateY(0);
+    }
+    100% {
+        transform: rotateY(-45deg) translateY(323px);
+    }
+}
+/* Used for the footer animation. */
+.stream__text--repeat-y-2 {
+    will-change: transform;
+    animation-duration: 12.411764705882353s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: stream__text--movement-2;
+    text-shadow: 0 -380px 0 rgb(223, 223, 223);
+    transform: rotateY(45deg) translateY(0);
+}
+@keyframes stream__text--movement-2 {
+    0% {
+        transform: rotateY(45deg) translateY(0);
+    }
+    100% {
+        transform: rotateY(45deg) translateY(380px);
+    }
+}
+.stream__text--reverse-2 {
+    animation-name: stream__text--movement-reverse-2;
+    transform: rotateY(-45deg) translateY(0);
+}
+@keyframes stream__text--movement-reverse-2 {
+    0% {
+        transform: rotateY(-45deg) translateY(0);
+    }
+    100% {
+        transform: rotateY(-45deg) translateY(380px);
+    }
+}
+
+/*
+ * @component footer
+*/
+
+.footer {
+    overflow: hidden;
+    position: relative;
+    height: 349px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(2deg, rgb(0, 0, 0) 70%, rgba(43, 43, 43, 0.04));
+}
+.footer > .stream {
+    max-width: 1422px;
+    margin: 0 auto;
+}
+.footer > .stream > .stream__text {
+    opacity: 0.32;
+}
+.footer > .stream > .stream__text:nth-child(1) {
+    left: -104px;
+}
+.footer > .stream > .stream__text:nth-child(2) {
+    right: 63px;
+}
+.footer > .container {
+    position: absolute;
+    left: 0;
+    top: 91px;
+    right: 0;
+    width: 90%;
+    max-width: 1296px;
+    margin: 0 auto;
+    z-index: 1;
+}
+.footer > .container > .container {
+    max-width: 30%;
+    margin: 7px 52px;
+}
+.footer .paragraph {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-shadow:
+        0 0 4px rgb(0, 0, 0),
+        0 0 8px rgb(0, 0, 0),
+        0 0 14px rgb(0, 0, 0),
+        0 0 20px rgb(0, 0, 0);
+    color: rgb(237, 237, 237);
+}
+.footer .title {
+    padding: 0 9px;
+    font-weight: 600;
+    text-shadow:
+        0 0 4px rgb(0, 0, 0),
+        0 0 8px rgb(0, 0, 0),
+        0 0 14px rgb(0, 0, 0),
+        0 0 20px rgb(0, 0, 0);
+    color: rgb(81, 81, 81);
+}
+.footer h4.title {
+    cursor: default;
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 12px;
+}
+.footer .nav {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+.footer .nav__item:first-child {
+    margin-top: 8px;
+}
+.footer .nav__item {
+    width: 100%;
+    margin: 0;
+    padding: 9px;
+    font-size: 12px;
+    font-weight: 600;
+    text-shadow:
+        0 0 4px rgb(0, 0, 0),
+        0 0 8px rgb(0, 0, 0),
+        0 0 14px rgb(0, 0, 0),
+        0 0 20px rgb(0, 0, 0);
+    text-transform: uppercase;
+    color: rgb(139, 139, 139);
+}
+.footer .nav__item:hover {
+    color: rgb(236, 236, 236);
+}
+.footer .nav__item + .nav__item {
+    padding-top: 0;
+}
+.footer .nav__item + .nav__item::before {
+    content: "";
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    border-top: 1px dashed rgb(60, 60, 60);
+    box-shadow:
+        0 0 4px 0 rgb(0, 0, 0),
+        0 0 8px 0 rgb(0, 0, 0),
+        0 0 14px 0 rgb(0, 0, 0),
+        0 0 20px 0 rgb(0, 0, 0);
+}
+.footer *::selection {
+    background-color: highlight;
+    text-shadow: none;
+}
+.footer--triangle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+	height: 0;
+	margin: 0;
+    padding: 0;
+	border-style: solid;
+	border-width: 42px 0 0 100vw;
+	border-color: rgb(255, 255, 255) transparent transparent transparent;
+	z-index: 1;
+}
+
+/*
+ * @component nav
+*/
+
+.nav {
+    position: relative;
+    margin: 0;
+    padding: 18px 50px;
+    background-color: transparent;
+    z-index: 2;
+}
+
+/* Begin of child menu. */
+.nav .nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 600px;
+    height: 460px;
+    background-color: rgb(248, 248, 248);
+    background-image: linear-gradient(to top, rgb(238, 238, 238), rgb(248, 248, 248));
+    border-radius: 0 6px 4px 4px;
+}
+.nav .nav::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: inherit;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.6);
+}
+.nav .nav:hover {
+    display: initial;
+}
+/* End of child menu. */
+
+.nav__item {
+    transition: color 300ms;
+    -webkit-user-select: none;
+    user-select: none;
+    position: relative;
+    margin: 4px 8px;
+    padding: 10px;
+    /* border-bottom: 1px dashed rgba(255, 255, 255, 0.7); */
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(244, 244, 244);
+}
+.nav__item:hover {
+    color: rgb(157, 157, 157);
+}
+/*
+    .nav__item::before {
+        transition: width 382ms;
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        top: 50%;
+        background-color: rgba(240, 240, 242, 0.9);
+        transform: translate(-10px, 100%);
+    }
+    .nav__item:hover::before {
+        width: 100%;
+    }
+*/
+
+.nav__item--parent {
+    cursor: default;
+    transition: initial;
+    padding-right: 21px;
+    border-radius: 6px 6px 0 0;
+}
+.nav__item--parent::after {
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid rgb(242, 242, 242);
+    transform: translateY(-34%);
+}
+.nav__item--parent:hover {
+    background-color: rgb(248, 248, 248);
+    color: rgb(0, 106, 218);
+}
+.nav__item--parent:hover > .nav {
+    display: initial;
+}
+.nav__item--parent:hover::after {
+    border-top-color: rgb(0, 104, 216);
+    transform: translateY(-34%) rotate(180deg);
+}
+
+.nav__item--pointer {
+    padding-right: 22px;
+}
+.nav__item--pointer::after {
+    content: "*";
+    transition: inherit;
+    position: absolute;
+    right: 8px;
+    bottom: 5px;
+    font-size: 17px;
+    color: rgb(251, 251, 251);
+}
+.nav__item--pointer:hover::after {
+    color: rgb(157, 157, 157);
+}
+
+/*
+ * @component meta
+*/
+
+.meta {
+    
+}
+
+/*
+ * @component link
+*/
+
+.link {
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    color: rgb(0, 106, 218);
+}
+.link--active {
+    text-decoration: underline;
+}
+.link:hover {
+    text-decoration: underline;
+}
+
+/*
+ * @component input
+*/
+
+.input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    appearance: none;
+}
+.input--text {
+    transition: border-color 211ms;
+    padding: 4px;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    font-size: 15px;
+    color: rgb(254, 254, 254);
+}
+.input--text:focus {
+    border-color: rgb(252, 252, 252);
+}
+.input--bold {
+    font-weight: 600;
+}
+
+/*
+ * @component search
+*/
+
+.search {
+    transition: max-width 312ms, border-color 211ms;
+    width: 90%;
+    max-width: 256px;
+    margin: 0 15px;
+}
+.search:focus {
+    max-width: 312px;
+}
+.search::placeholder {
+    color: rgb(192, 192, 192);
+}
+
+/*
+ * @component logo
+*/
+
+.logo {
+    margin-bottom: 11px;
+    padding: 6px 8px;
+    border: 2px solid rgb(254, 254, 254);
+    box-shadow:
+        0 0 13px 3px rgb(0, 0, 0),
+        inset 0 0 10px 3px rgb(0, 0, 0);
+    color: rgb(254, 254, 254);
+}
+
+/*
+ * @component promotion
+ * This should be placed before the .footer node.
+*/
+
+.promotion {}
+.promotion--orange {
+    background-image: linear-gradient(to bottom, rgb(230, 197, 77), rgb(248, 179, 77));
+}
+.promotion--orange + .footer::before {
+    border-top-color: rgb(248, 179, 77);
+}
+.promotion--purple {
+    background-image: linear-gradient(to bottom, #8f94fb, #4e54c8);
+}
+.promotion--purple + .footer::before {
+    border-top-color: #4e54c8;
+}
+.promotion h3.title {
+    margin: 62px auto 5px auto;
+    color: rgb(240, 240, 240);
+}
+.promotion .input--text {
+    width: 90%;
+    max-width: 300px;
+    margin: 5px auto 62px auto;
+    border-bottom: 2px solid rgb(241, 241, 241);
+    font-weight: 600;
+    font-size: 18px;
+}
+.promotion .input--text::placeholder {
+    color: rgb(250, 250, 250);
+}
+
+/*
+ * @component comment
+ * @example
+ * <div class="flex flex--full flex--vertical comment">
+ *     <img src="src/images/author.jpg" alt="" class="image">
+ *     <div class="flex container">
+ *         <span class="meta">Vasile Pește</span>
+ *         <p class="paragraph">
+ *             Nullam elementum blandit molestie. Maecenas lacus diam,
+ *             mattis eu orci et, facilisis vulputate leo.
+ *             Aenean condimentum lectus ut felis ultrices sodales. Nullam elementum blandit molestie. Maecenas lacus diam,
+ *             mattis eu orci et, facilisis vulputate leo.
+ *         </p>
+ *     </div>
+ * </div>
+*/
+
+.comment {
+    margin: 17px 0;
+}
+.comment:first-child {
+    margin-top: 0;
+}
+.comment:last-child {
+    margin-bottom: 0;
+}
+.comment > .container:nth-child(1) {
+    max-width: 20%;
+}
+.comment > .container:nth-child(2) {
+    position: relative;
+    max-width: 68%;
+    min-height: 40px;
+    margin-left: 24px;
+    padding: 12px 15px;
+    background-image: linear-gradient(to top right, rgb(244, 244, 244), rgb(230, 230, 230));
+    border-radius: 18px 18px 18px 8px;
+    box-shadow:
+        inset 0 0 6px 1px rgba(0, 0, 0, 0.021),
+        2px 1px 8px 2px rgba(1, 1, 1, 0.0092);
+}
+.comment:nth-child(even) > .container:nth-child(2) {
+    border-radius: 8px 18px 18px 18px;
+}
+/*
+    .comment:not(:first-child) > .container:nth-child(2)::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -34px;
+        width: 3px;
+        height: 34px;
+        background-color: rgb(230, 230, 230);
+        transform: translateX(-50%);
+        opacity: 0.39;
+    }
+*/
+/*
+    .comment > .container:nth-child(2)::before {
+        content: "";
+        position: absolute;
+        left: -9px;
+        top: 50%;
+        width: 0;
+    	height: 0;
+    	border-top: 8px solid transparent;
+    	border-right: 9px solid rgb(229, 229, 229);
+    	border-bottom: 8px solid transparent;
+        transform: translateY(-50%);
+    }
+*/
+.comment .image {
+    -webkit-user-select: none;
+    user-select: none;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    box-shadow: -2px 1px 8px 2px rgba(1, 1, 1, 0.0092);
+}
+.comment .meta {
+    margin: 0 0 2px 0;
+    padding: 0;
+}
+.comment .paragraph {
+    font-size: 16px;
+}
+
+/*
+ * @component pagination
+ * @example
+ *  <div class="pagination">
+ *      <a href="" class="link">1</a>
+ *      <a href="" class="link">2</a>
+ *      <a href="" class="link link--active">3</a>
+ *      <a href="" class="link">4</a>
+ *      <a href="" class="link">5</a>
+ *      <span class="ellipsis">…</span>
+ *      <a href="" class="link">11</a>
+ *  </div>
+*/
+
+.pagination {
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+.pagination * {
+    -webkit-user-select: none;
+    user-select: none;
+}
+.pagination .link {
+    transition: 282ms color;
+    position: relative;
+    margin: 7px;
+    width: 32px;
+    height: 32px;
+    background-image: linear-gradient(to top right, rgb(244, 244, 244), rgb(234, 234, 234));
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 6px 1px rgba(0, 0, 0, 0.021),
+        0 1px 8px 2px rgba(1, 1, 1, 0.0092);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 32px;
+    color: rgb(26, 26, 26);
+}
+.pagination .link::before {
+    transition: 282ms background-color;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: inherit;
+    height: inherit;
+    background-color: transparent;
+    border-radius: inherit;
+}
+.pagination .link:hover,
+.pagination .link--active {
+    text-decoration: none;
+    color: rgb(0, 106, 218);
+}
+.pagination .link:hover::before,
+.pagination .link--active::before {
+    background-color: rgba(30, 136, 248, 0.035);
+}
+.pagination .ellipsis {
+    cursor: default;
+    margin: 0 6px;
+    font-size: 32px;
+    color: rgb(26, 26, 26);
+    transform: translateY(-23%);
+}
+
+/*
+ * @component ellipsis
+ * @example
+ *  <span class="ellipsis">…</span>
+*/
+
+.ellipsis {
+    font-family: "Courier";
+}
+
+/*
+ * @component image
+*/
+
+.image {
+    width: 100%;
+}
+
+/*
+ * @component list
+*/
+
+.list {
+    margin: 17px 17px 17px 40px;
+    padding: 0;
+    color: rgb(20, 20, 20);
+}
+.list li {
+    font-size: 17px;
+}
+ul.list {
+    
+}
+ol.list {
+    
+}
+dl.list {
+    
+}
+.list--none {
+    margin: 17px 0;
+    list-style-type: none;
+}
+.list--square {
+    list-style-type: square;
+}
+.list--upper-roman {
+    list-style-type: upper-roman;
+}
+
+/*
+ * @component hamburger
+*/
+
+.hamburger {
+    
+}
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px;
+    background-color: rgb(251, 251, 251);
+    border-radius: 6px;
+}
+
+/*
+ * @component arrow
+*/
+
+.arrow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 3px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    background-color: red;
+    border: none;
+    border-radius: 0 0 6px 6px;
+    z-index: 5;
+}
+.arrow::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    border-top: 3px solid red;
+    border-right: 3px solid red;
+    background-color: transparent;
+    border-radius: 2px 0 2px 0;
+    transform:
+        rotate(-45deg)
+        translate(-8px, -7px);
+}

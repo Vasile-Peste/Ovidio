@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+    font-smooth: always;
+    font-smoothing: antialiased;
+    -webkit-font-variant-ligatures: none;
+    font-variant-ligatures: none;
+    font-family: "Open Sans", "-apple-system", "Helvetica", "Arial";
+    font-size: 12px;
+    font-weight: 400;
+}
+
+html,
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+b,
+strong {
+    font-weight: 600;
+}
+
+b,
+strong,
+i,
+em,
+span,
+code {
+    font-size: inherit;
+    color: inherit;
+}
