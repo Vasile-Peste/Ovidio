@@ -273,9 +273,7 @@ h3.title {
 */
 
 .header {
-    overflow: hidden;
     position: relative;
-    height: 428px;
     background-color: rgb(0, 0, 0);
     background-image: linear-gradient(-182deg, rgb(0, 0, 0) 70%, rgba(43, 43, 43, 0.04));
 }
@@ -305,6 +303,7 @@ h3.title {
     color: rgb(240, 240, 240);
 }
 .header > .stream {
+    height: 345px;
     /*
         background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(38, 38, 38));
         background-repeat: no-repeat;
@@ -397,7 +396,6 @@ h3.title {
 .stream {
     overflow: hidden;
     position: relative;
-    height: inherit;
     margin: 0;
     padding: 0;
     background-color: transparent;
@@ -484,9 +482,7 @@ h3.title {
 */
 
 .footer {
-    overflow: hidden;
     position: relative;
-    height: 349px;
     margin: 0;
     padding: 0;
     background-color: rgb(0, 0, 0);
@@ -494,6 +490,7 @@ h3.title {
 }
 .footer > .stream {
     max-width: 1422px;
+    height: 349px;
     margin: 0 auto;
 }
 .footer > .stream > .stream__text {
