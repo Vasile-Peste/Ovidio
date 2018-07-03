@@ -611,7 +611,7 @@ h3.title {
     margin: 0;
     padding: 18px 50px;
     background-color: transparent;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* Begin of child menu. */
@@ -620,7 +620,7 @@ h3.title {
     position: absolute;
     left: 0;
     top: 100%;
-    width: 600px;
+    width: 640px;
     height: 460px;
     background-color: rgb(248, 248, 248);
     background-image: linear-gradient(to top, rgb(238, 238, 238), rgb(248, 248, 248));
@@ -634,7 +634,6 @@ h3.title {
     top: 0;
     bottom: 0;
     border-radius: inherit;
-    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.6);
 }
 .nav .nav:hover {
     display: initial;
@@ -676,7 +675,7 @@ h3.title {
     cursor: default;
     transition: initial;
     padding-right: 21px;
-    border-radius: 6px 6px 0 0;
+    border-radius: 4px 4px 0 0;
 }
 .nav__item--parent::after {
     content: "";
