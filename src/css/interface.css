@@ -556,14 +556,13 @@ h3.title {
     width: 100%;
     margin: 0;
     padding: 9px;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     text-shadow:
         0 0 4px rgb(0, 0, 0),
         0 0 8px rgb(0, 0, 0),
         0 0 14px rgb(0, 0, 0),
         0 0 20px rgb(0, 0, 0);
-    text-transform: uppercase;
     color: rgb(139, 139, 139);
 }
 .footer .nav__item:hover {
@@ -620,12 +619,20 @@ h3.title {
     position: absolute;
     left: 0;
     top: 100%;
-    width: 700px;
+    width: 640px;
     height: 460px;
     background-color: rgb(248, 248, 248);
     background-image: linear-gradient(to top, rgb(238, 238, 238), rgb(248, 248, 248));
     border-radius: 0 6px 4px 4px;
-    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.6);
+}
+.nav .nav::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: inherit;
 }
 .nav .nav:hover {
     display: initial;
@@ -667,7 +674,7 @@ h3.title {
     cursor: default;
     transition: initial;
     padding-right: 21px;
-    border-radius: 6px 6px 0 0;
+    border-radius: 4px 4px 0 0;
 }
 .nav__item--parent::after {
     content: "";
