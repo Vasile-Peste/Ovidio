@@ -84,6 +84,13 @@
 .side-bar--dimensional .section {
     transform: rotateY(-8deg);
 }
+.side-bar--shadow {
+    border-radius: 10px 10px 4px 4px;
+    box-shadow:
+        rgba(50, 50, 93, 0.097) 0px 50px 100px 0px,
+        rgba(50, 50, 93, 0.151) 0px 15px 35px 0px,
+        rgba(0, 0, 0, 0.098) 0px 5px 15px 0px;
+}
 
 /*
  * @component feed
