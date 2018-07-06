@@ -295,6 +295,7 @@ h3.title {
 	margin: 0;
     padding: 0;
     background-image: linear-gradient(to top, transparent, rgb(0, 0, 0));
+    z-index: -2; /* @see .nav .nav */
 }
 .header .nav__item {
     font-weight: 600;
@@ -623,15 +624,12 @@ h3.title {
     background-color: rgb(248, 248, 248);
     background-image: linear-gradient(to top, rgb(238, 238, 238), rgb(248, 248, 248));
     border-radius: 0 6px 4px 4px;
-}
-.nav .nav::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    border-radius: inherit;
+    box-shadow:
+        rgba(50, 50, 93, 0.0980392) 0px 50px 100px 0px,
+        rgba(50, 50, 93, 0.14902) 0px 15px 35px 0px,
+        rgba(0, 0, 0, 0.0980392) 0px 5px 15px 0px;
+    transform: translate3D(0, 0, 0);
+    z-index: -1;
 }
 .nav .nav:hover {
     display: initial;
