@@ -16,6 +16,12 @@
     font-weight: 400;
 }
 
+*:focus,
+*:focus::before,
+*:focus::after {
+    outline: 0;
+}
+
 html,
 body {
     background-color: rgb(255, 255, 255);
