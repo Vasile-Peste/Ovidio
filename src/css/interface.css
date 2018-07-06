@@ -773,7 +773,7 @@ h3.title {
     transition: max-width 312ms, border-color 211ms;
     width: 90%;
     max-width: 256px;
-    margin: 0 15px;
+    margin: 0 18px;
 }
 .search:focus {
     max-width: 312px;
