@@ -625,9 +625,9 @@ h3.title {
     background-image: linear-gradient(to top, rgb(238, 238, 238), rgb(248, 248, 248));
     border-radius: 0 6px 4px 4px;
     box-shadow:
-        rgba(50, 50, 93, 0.0980392) 0px 50px 100px 0px,
-        rgba(50, 50, 93, 0.14902) 0px 15px 35px 0px,
-        rgba(0, 0, 0, 0.0980392) 0px 5px 15px 0px;
+        rgba(50, 50, 93, 0.097) 0px 50px 100px 0px,
+        rgba(50, 50, 93, 0.151) 0px 15px 35px 0px,
+        rgba(0, 0, 0, 0.098) 0px 5px 15px 0px;
     transform: translate3D(0, 0, 0);
     z-index: -1;
 }
