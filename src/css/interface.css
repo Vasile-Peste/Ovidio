@@ -12,6 +12,10 @@
  * HOW TO Responsive header and not fixed height: just set the height and overflow hidden to .stream.
 */
 
+:root {
+    --max-index: 999999;
+}
+
 /*
  * @modifier no-select
  * @desc Makes an element unselectable.
@@ -295,7 +299,6 @@ h3.title {
 	margin: 0;
     padding: 0;
     background-image: linear-gradient(to top, transparent, rgb(0, 0, 0));
-    z-index: -2; /* @see .nav .nav */
 }
 .header .nav__item {
     font-weight: 600;
@@ -610,7 +613,7 @@ h3.title {
     margin: 0;
     padding: 18px 50px;
     background-color: transparent;
-    z-index: 3;
+    z-index: var(--max-index);
 }
 
 /* Begin of child menu. */
@@ -623,13 +626,11 @@ h3.title {
     height: 460px;
     background-color: rgb(248, 248, 248);
     background-image: linear-gradient(to top, rgb(238, 238, 238), rgb(248, 248, 248));
-    border-radius: 0 6px 4px 4px;
+    border-radius: 4px;
     box-shadow:
         rgba(50, 50, 93, 0.097) 0px 50px 100px 0px,
         rgba(50, 50, 93, 0.151) 0px 15px 35px 0px,
         rgba(0, 0, 0, 0.098) 0px 5px 15px 0px;
-    transform: translate3D(0, 0, 0);
-    z-index: -1;
 }
 .nav .nav:hover {
     display: initial;
@@ -671,7 +672,6 @@ h3.title {
     cursor: default;
     transition: initial;
     padding-right: 21px;
-    border-radius: 4px 4px 0 0;
 }
 .nav__item--parent::after {
     content: "";
@@ -685,15 +685,11 @@ h3.title {
     border-top: 4px solid rgb(242, 242, 242);
     transform: translateY(-34%);
 }
-.nav__item--parent:hover {
-    background-color: rgb(248, 248, 248);
-    color: rgb(0, 106, 218);
-}
 .nav__item--parent:hover > .nav {
     display: initial;
 }
 .nav__item--parent:hover::after {
-    border-top-color: rgb(0, 104, 216);
+    border-top-color: rgb(157, 157, 157);
     transform: translateY(-34%) rotate(180deg);
 }
 
