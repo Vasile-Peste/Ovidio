@@ -8,10 +8,6 @@
  * TRY Swap author and title position.
 */
 
-/*
- * HOW TO Responsive header and not fixed height: just set the height and overflow hidden to .stream.
-*/
-
 :root {
     --max-index: 999999;
 }
