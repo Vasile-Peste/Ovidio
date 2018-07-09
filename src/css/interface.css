@@ -384,9 +384,12 @@ h3.title {
     bottom: 0;
     width: 0;
     height: 0;
+    margin: 0;
+    padding: 0;
     border-left: 50vw solid transparent;
     border-right: 50vw solid transparent;
     border-bottom: 30px solid rgb(255, 255, 255);
+    z-index: 1;
 }
 
 /*
