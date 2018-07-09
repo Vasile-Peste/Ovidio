@@ -5,10 +5,11 @@
  * TRY A ribbon as background in main.
  * TRY Use Mockupeditor designs, like coffee for donation.
  * TRY Swap author and title position.
+ * TRY Highlight the quote paragraph in the author section. Maybe its excelent for branding, people will remember your name.
 */
 
 :root {
-    --max-index: 999999;
+    --max-index: 2147483648;
 }
 
 /*
