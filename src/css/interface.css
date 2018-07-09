@@ -1033,9 +1033,9 @@ h3.title {
 .pagination .ellipsis {
     cursor: default;
     margin: 0 6px;
-    font-size: 32px;
+    font-size: 36px;
     color: rgb(26, 26, 26);
-    transform: translateY(-23%);
+    transform: translateY(-20%);
 }
 
 /*
@@ -1045,7 +1045,7 @@ h3.title {
 */
 
 .ellipsis {
-    font-family: "Courier";
+    font-family: "Courier New";
 }
 
 /*
