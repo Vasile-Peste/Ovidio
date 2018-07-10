@@ -1,0 +1,3 @@
+* Group tags / categories in sidebar in a single inline div.
+* Complete design for footer.
+* Complete design for links with arrow.
