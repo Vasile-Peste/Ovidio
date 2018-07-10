@@ -8,16 +8,14 @@
  * TRY Highlight the quote paragraph in the author section. Maybe its excelent for branding, people will remember your name.
 */
 
-:root {
-    --max-index: 2147483648;
-}
+/* *********************************************************************************************************** */
 
 /*
  * @modifier no-select
  * @desc Makes an element unselectable.
 */
 
-.--no-select {
+.--unselectable {
     -webkit-user-select: none;
     user-select: none;
 }
@@ -854,7 +852,9 @@ h3.title {
  * This should be placed before the .footer node.
 */
 
-.promotion {}
+.promotion {
+
+}
 .promotion--orange {
     background-image: linear-gradient(
         to bottom,

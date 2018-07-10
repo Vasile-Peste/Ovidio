@@ -1,8 +1,23 @@
+:root {
+    /*
+     *
+     * The following are global variables.
+     *
+    */
+
+    /* Used as maximum value for the "z-index" property. */
+    --max-index: 2147483648;
+
+    /* Used as minimum value for the "z-index" property. */
+    --min-index: -2147483648;
+}
+
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
+    border: none;
     outline: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

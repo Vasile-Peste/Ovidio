@@ -1,3 +1,8 @@
+/*
+ * @component flex
+ * @desc Utility component for using the flexbox box model.
+*/
+
 .flex {
     display: flex;
 }
