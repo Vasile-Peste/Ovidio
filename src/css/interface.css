@@ -136,6 +136,25 @@
 }
 
 /*
+ * @component donate
+*/
+
+.donate {
+    padding: 17px 20px;
+}
+.donate .paragraph {
+    margin: 0;
+    font-size: 15px;
+    color: rgb(31, 31, 32);
+}
+.donate * + .paragraph {
+    margin-top: 5px;
+}
+.donate .link {
+    text-shadow: 0 0 40px rgba(0, 0, 150, 0.08);
+}
+
+/*
  * @component section
 */
 
@@ -159,7 +178,7 @@
 .section--chips {
     margin-top: 61px;
 }
-.section--chips > .feed:first-child > .image:first-child  {
+.section--chips > *:first-child > .image:first-child  {
     -webkit-user-select: none;
     user-select: none;
     margin: -40px auto 1px auto;
