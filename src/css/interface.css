@@ -6,7 +6,6 @@
  * TRY Use Mockupeditor designs, like coffee for donation.
  * TRY Swap author and title position.
  * TRY Highlight the quote paragraph in the author section. Maybe its excelent for branding, people will remember your name.
- * TODO Header machine code modifier (see the video on your iPhone).
 */
 
 /* *********************************************************************************************************** */
@@ -408,6 +407,24 @@ h3.title {
     border-right: 50vw solid transparent;
     border-bottom: 30px solid rgb(255, 255, 255);
     z-index: 1;
+}
+.header--machine {
+
+}
+.header--machine > .stream > .stream__text:nth-child(1),
+.header--machine > .stream > .stream__text:nth-child(2) {
+    transition: opacity 0.72s ease;
+    left: -87px;
+}
+.header--machine > .stream > .stream__text:nth-child(2) {
+    right: initial;
+    opacity: 0;
+}
+.header--machine > .stream > .stream__text:nth-child(3) {
+    right: 63px;
+}
+.header--machine:hover > .stream > .stream__text:nth-child(1) {
+    opacity: 0;
 }
 
 /*
