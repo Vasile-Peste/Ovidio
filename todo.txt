@@ -1,3 +1,4 @@
 * Group tags / categories in sidebar in a single inline div.
 * Complete design for footer.
 * Complete design for links with arrow.
+* Move tags at the end of the article, and create new style for them.
