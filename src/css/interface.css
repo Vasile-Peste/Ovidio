@@ -408,6 +408,24 @@ h3.title {
     border-bottom: 30px solid rgb(255, 255, 255);
     z-index: 1;
 }
+.header--machine {
+
+}
+.header--machine > .stream > .stream__text:nth-child(1),
+.header--machine > .stream > .stream__text:nth-child(2) {
+    transition: opacity 0.72s ease;
+    left: -87px;
+}
+.header--machine > .stream > .stream__text:nth-child(2) {
+    right: initial;
+    opacity: 0;
+}
+.header--machine > .stream > .stream__text:nth-child(3) {
+    right: 63px;
+}
+.header--machine:hover > .stream > .stream__text:nth-child(1) {
+    opacity: 0;
+}
 
 /*
  * @component author
@@ -488,12 +506,15 @@ h3.title {
 }
 /* Used for the header animation. */
 .stream__text--repeat-y {
+    --translation-height: 323px;
+    --translation-duration: 8s;
+
     will-change: transform;
-    animation-duration: 8s;
+    animation-duration: var(--translation-duration);
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-name: stream__text--movement;
-    text-shadow: 0 -323px 0 rgb(223, 223, 223);
+    text-shadow: 0 calc(-1 * var(--translation-height)) 0 rgb(223, 223, 223);
     transform: rotateY(45deg) translateY(0);
 }
 @keyframes stream__text--movement {
@@ -501,7 +522,7 @@ h3.title {
         transform: rotateY(45deg) translateY(0);
     }
     100% {
-        transform: rotateY(45deg) translateY(323px);
+        transform: rotateY(45deg) translateY(var(--translation-height));
     }
 }
 .stream__text--reverse {
@@ -513,17 +534,20 @@ h3.title {
         transform: rotateY(-45deg) translateY(0);
     }
     100% {
-        transform: rotateY(-45deg) translateY(323px);
+        transform: rotateY(-45deg) translateY(var(--translation-height));
     }
 }
 /* Used for the footer animation. */
 .stream__text--repeat-y-2 {
+    --translation-height: 380px;
+    --translation-duration: 12.411764705882353s;
+
     will-change: transform;
-    animation-duration: 12.411764705882353s;
+    animation-duration: var(--translation-duration);
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-name: stream__text--movement-2;
-    text-shadow: 0 -380px 0 rgb(223, 223, 223);
+    text-shadow: 0 calc(-1 * var(--translation-height)) 0 rgb(223, 223, 223);
     transform: rotateY(45deg) translateY(0);
 }
 @keyframes stream__text--movement-2 {
@@ -531,7 +555,7 @@ h3.title {
         transform: rotateY(45deg) translateY(0);
     }
     100% {
-        transform: rotateY(45deg) translateY(380px);
+        transform: rotateY(45deg) translateY(var(--translation-height));
     }
 }
 .stream__text--reverse-2 {
@@ -543,7 +567,7 @@ h3.title {
         transform: rotateY(-45deg) translateY(0);
     }
     100% {
-        transform: rotateY(-45deg) translateY(380px);
+        transform: rotateY(-45deg) translateY(var(--translation-height));
     }
 }
 
