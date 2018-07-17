@@ -980,7 +980,7 @@ h3.title {
     box-shadow:
         inset 0 0 6px 1px rgba(0, 0, 0, 0.021),
         2px 1px 8px 2px rgba(1, 1, 1, 0.0092),
-        0 2px 100px 0 rgba(0, 0, 0, 0.03);
+        0 2px 100px 0 rgba(0, 0, 0, 0.006);
 }
 .comment:nth-child(even) > .container:nth-child(2) {
     border-radius: 8px 18px 18px 18px;
