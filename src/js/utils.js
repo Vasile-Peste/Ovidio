@@ -4,6 +4,6 @@ Math.percentage = function (n, percent) {
     return percent * n / 100;
 };
 
-Math.percentageOf = function (a, b) {
-    return 100 * b / a;
+Math.percentageOf = function (n, a) {
+    return 100 * a / n;
 };
