@@ -1215,11 +1215,35 @@ dl.list {
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.02rem;
-    color: rgb(64, 64, 64);
+    color: rgb(76, 76, 76);
 }
+/*
+    .button::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: transparent;
+        border: 1px solid rgba(30, 136, 248, 0.088);
+        border-radius: inherit;
+    }
+    .button::after {
+        content: "";
+        position: absolute;
+        left: 1px;
+        right: 1px;
+        top: 1px;
+        bottom: 1px;
+        background-color: transparent;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 2px;
+    }
+*/
 .button:hover {
     background-color: rgba(30, 136, 248, 0.18);
-    color: rgb(46, 46, 46);
+    color: rgb(56, 56, 55);
 }
 .button--small {
     padding: 4px 8px;
