@@ -587,8 +587,11 @@ h3.title {
     );
 }
 .footer > .stream {
+    position: absolute;
+    left: auto;
+    top: 0;
+    bottom: 0;
     max-width: 1422px;
-    height: 349px;
     margin: 0 auto;
 }
 .footer > .stream > .stream__text {
@@ -601,13 +604,9 @@ h3.title {
     right: 63px;
 }
 .footer > .container {
-    position: absolute;
-    left: 0;
-    top: 91px;
-    right: 0;
     width: 90%;
     max-width: 1296px;
-    margin: 0 auto;
+    margin: 91px auto;
     z-index: 1;
 }
 .footer > .container > .container {
@@ -634,7 +633,8 @@ h3.title {
         0 0 8px rgb(0, 0, 0),
         0 0 14px rgb(0, 0, 0),
         0 0 20px rgb(0, 0, 0);
-    color: rgb(81, 81, 81);
+    letter-spacing: 0.1rem;
+    color: rgb(181, 181, 181);
 }
 .footer h4.title {
     cursor: default;
