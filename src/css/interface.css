@@ -604,9 +604,7 @@ h3.title {
     right: 63px;
 }
 .footer > .container {
-    width: 90%;
-    max-width: 1296px;
-    margin: 91px auto;
+    margin: 91px auto 81px auto;
     z-index: 1;
 }
 .footer > .container > .container {
