@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zxx" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans:400,600">
+        <link rel="stylesheet" href="src/css/box-model.css">
+        <link rel="stylesheet" href="src/css/global.css">
+        <link rel="stylesheet" href="src/css/interface.css">
+        <link rel="stylesheet" href="src/css/override.css">
+        <script type="text/javascript" src="src/js/utils.js"></script>
+        <script type="text/javascript" src="src/js/interface.js"></script>
+        <title>Index View — Abstract Language</title>
+    </head>
+    <body class="flex flex--full">
+        <header class="flex flex--full header header--triangle">
+            <!-- Header. -->
+            <div class="flex flex--full container">
+                <nav class="flex flex--full flex--vertical nav">
+                    <!-- Left layout. -->
+                    <div class="flex flex--semi">
+                        <a href="" class="nav__item">ABOUT ME</a>
+                        <a href="" class="nav__item">BLOG</a>
+                        <a href="" class="nav__item">HOW TO</a>
+                        <div class="nav__item nav__item--parent">
+                            MARKET
+                            <nav class="nav">
+                                <div class="flex flex--full">
+                                    <!-- Sub menu content. -->
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- Right layout. -->
+                    <div class="flex flex--semi flex--end flex--right">
+                        <input type="text" class="input input--text search" placeholder="Search…">
+                    </div>
+                </nav>
+            </div>
+            <aside class="flex flex--full flex--center flex--vertical author">
+                <img src="src/images/author_1.jpg" alt="" class="image">
+                <p class="paragraph">
+                    «Nullam elementum blandit molestie. Maecenas lacus diam,
+                    mattis eu orci et, facilisis vulputate leo.
+                    Aenean condimentum lectus ut felis ultrices sodales.»
+                </p>
+            </aside>
+            <pre class="flex flex--full stream">
+                <span class="stream__text stream__text--repeat-y">
+                    /**
+                     * sort Used to order an array of integers in ascending order (O(n)).
+                     * @param {Array} arr
+                     * @return {Promise}
+                    */
+                    
+                    function sort (arr) {
+                        return new Promise(resolve => {
+                            const sorted = [];
+                            
+                            for (const item of arr) {
+                                setTimeout(item => sorted.push(item), item, item);
+                            }
+                            
+                            setTimeout(() => resolve(sorted), arr.reduce((a, b) => a + b, 0) + 1);
+                        });
+                    }
+                </span>
+                <span class="stream__text stream__text--repeat-y stream__text--reverse">
+                    «Nullam elementum blandit molestie.
+                    Aenean condimentum lectus ut felis.
+                    Phasellus fringilla nisl tincidunt dolor.»
+                    
+                    «Nam quis ante sed neque rhoncus.
+                    Proin porta, turpis quis iaculis.
+                    Maecenas tristique vulputate magna, vel laoreet.»
+                    
+                    «Nullam lobortis turpis a tempor molestie.
+                    Maecenas fringilla nisl at malesuada porta.»
+                </span>
+            </pre>
+        </header>
+        <main class="flex flex--full flex--center main">
+            <!-- Main. -->
+            <article class="article article--spaced">
+                <!-- Article. -->
+                <aside class="flex flex--full meta">
+                    <span class="meta">February 22 2018, <a href="" class="link">Vasile Pește</a>, tagged in <a href="" class="link">Algorithms</a>, <a href="" class="link">Design</a></span>
+                </aside>
+                <h2 class="title">Mauris vestibulum tincidunt nisi non rutrum</h2>
+                <p class="paragraph paragraph--abstract">
+                    Nullam elementum blandit molestie. Maecenas lacus diam, mattis eu orci et, facilisis vulputate leo.
+                    Aenean condimentum lectus ut felis ultrices sodales. Vestibulum rutrum interdum mauris mattis ultricies.
+                    Phasellus fringilla nisl tincidunt dolor blandit interdum.
+                </p>
+                <h2 class="title">Quisque vel ante nec</h2>
+                <p class="paragraph">
+                    Etiam viverra eros vitae molestie suscipit.
+                    Suspendisse potenti. Donec a ex vitae erat accumsan porta sed at justo. Nulla eget metus volutpat, dapibus metus vel, vestibulum massa.
+                    Suspendisse maximus dictum venenatis. Vestibulum eleifend semper est, ut porttitor erat congue quis. Pellentesque sodales turpis nec placerat lacinia.
+                    Quisque vel ante nec turpis molestie porta. Aliquam varius justo a magna eleifend, quis pretium nisi vehicula. Sed posuere ut dolor quis ultrices.
+                </p>
+                <ul class="list">
+                    <li>Primo</li>
+                    <li>Primo</li>
+                    <li>Primo</li>
+                    <li>Primo</li>
+                </ul>
+                <p class="paragraph">
+                    Etiam viverra eros vitae molestie suscipit.
+                    Suspendisse potenti. Donec a ex vitae erat accumsan porta sed at justo. Nulla eget metus volutpat, dapibus metus vel, vestibulum massa.
+                    Suspendisse maximus dictum venenatis. Vestibulum eleifend semper est, ut porttitor erat congue quis. Pellentesque sodales turpis nec placerat lacinia.
+                    Quisque vel <span class="highlight">ante</span> nec turpis molestie porta. Aliquam varius justo a magna eleifend, quis pretium nisi vehicula. Sed posuere ut dolor quis ultrices.
+                </p>
+                <pre class="pre">
+function sort (arr) {
+    return new Promise(resolve => {
+        const sorted = [];
+        
+        for (const item of arr) {
+            setTimeout(item => sorted.push(item), item, item);
+        }
+        
+        setTimeout(() => resolve(sorted), 1);
+    });
+}</pre>
+                <p class="paragraph">
+                    Etiam viverra eros vitae molestie suscipit.
+                    Quisque vel ante nec turpis molestie porta. Aliquam varius justo a magna eleifend, quis pretium nisi vehicula. Sed posuere ut dolor quis ultrices.
+                </p>
+                <h2 class="title">Aliquam scelerisque auctor</h2>
+                <p class="paragraph">
+                    Proin turpis risus, consequat vitae tempus nec, ornare eget dui. Proin id luctus dui, mollis mattis metus.
+                    Nam quis ante sed neque rhoncus luctus aliquet vitae arcu. Fusce lobortis libero magna.
+                    Proin porta, turpis quis iaculis porttitor, justo erat interdum nibh, non volutpat quam tellus eu lectus.
+                    Maecenas tristique vulputate magna, vel laoreet lacus lobortis at. Nullam lobortis turpis a tempor molestie.
+                    Maecenas fringilla nisl at <a href="" class="link">malesuada</a> porta. Aliquam scelerisque auctor est non lacinia.
+                </p>
+                <h3 class="title">Maecenas tristique</h3>
+                <p class="paragraph">
+                    Proin porta, turpis quis iaculis porttitor, justo erat interdum nibh, non volutpat quam tellus eu lectus.
+                    Maecenas tristique vulputate magna, vel laoreet lacus lobortis at. Nullam lobortis turpis a tempor molestie.
+                    Maecenas fringilla nisl at malesuada porta. Aliquam scelerisque auctor est non lacinia.
+                </p>
+                <hr class="flex flex--full separator">
+                <aside class="flex flex--full comments">
+                    <div class="flex flex--full flex--vertical comment">
+                        <img src="src/images/author.jpg" alt="" class="image">
+                        <div class="flex flex--column container">
+                            <span class="meta">Vasile Pește says:</span>
+                            <p class="paragraph">
+                                Nullam elementum blandit molestie. Maecenas lacus diam,
+                                mattis eu orci et, facilisis vulputate leo.
+                                Aenean condimentum lectus ut felis ultrices sodales. Nullam elementum blandit molestie. Maecenas lacus diam,
+                                mattis eu orci et, facilisis vulputate leo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex--full flex--vertical comment">
+                        <img src="src/images/author.jpg" alt="" class="image">
+                        <div class="flex flex-column container">
+                            <span class="meta">Vasile Pește says:</span>
+                            <p class="paragraph">
+                                Nullam elementum blandit molestie. Maecenas lacus diam,
+                                mattis eu orci et, facilisis vulputate leo.
+                                Aenean condimentum lectus ut felis ultrices sodales. Nullam elementum blandit molestie. Maecenas lacus diam,
+                                mattis eu orci et, facilisis vulputate leo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex--full flex--vertical comment">
+                        <img src="src/images/author.jpg" alt="" class="image">
+                        <div class="flex flex--column container">
+                            <span class="meta">Vasile Pește says:</span>
+                            <p class="paragraph">
+                                Nullam elementum blandit molestie. Maecenas lacus diam,
+                                mattis eu orci et, facilisis vulputate leo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex--full flex--vertical comment">
+                        <img src="src/images/author.jpg" alt="" class="image">
+                        <div class="flex flex--column container">
+                            <span class="meta">Vasile Pește says:</span>
+                            <p class="paragraph">
+                                Nullam elementum blandit molestie. Maecenas lacus diam,
+                                mattis eu orci et, facilisis vulputate leo.
+                                Aenean condimentum lectus ut felis ultrices sodales. Nullam elementum blandit molestie. Maecenas lacus diam,
+                                mattis eu orci et, facilisis vulputate leo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex--full flex--vertical comment">
+                        <img src="src/images/author.jpg" alt="" class="image">
+                        <div class="flex flex--column container">
+                            <span class="meta">Vasile Pește says:</span>
+                            <p class="paragraph">
+                                Nullam elementum blandit molestie.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex--full flex--center flex--vertical pagination">
+                        <a href="" class="link">1</a>
+                        <a href="" class="link">2</a>
+                        <a href="" class="link link--active">3</a>
+                        <a href="" class="link">4</a>
+                        <a href="" class="link">5</a>
+                        <span class="ellipsis">…</span>
+                        <a href="" class="link">11</a>
+                    </div>
+                </aside>
+            </article>
+            <aside class="side-bar side-bar--shadow">
+                <section class="section section--prototype">
+                    <div class="flex flex--full flex--column feed">
+                        <h4 class="title">
+                            <a href="" class="link">Frames click jacking on input boxes like a boss</a>
+                        </h4>
+                        <span class="meta">February 22 2018</span>
+                        <p class="paragraph">
+                            <a href="" class="link">
+                                Etiam viverra eros vitae molestie suscipit porcozpini.
+                                Suspendisse potenti. Donec a ex vitae erat accumsan porta sed at justo…
+                            </a>
+                        </p>
+                    </div>
+                    <div class="flex flex--full flex--column feed">
+                        <h4 class="title">
+                            <a href="" class="link">Frames click jacking on input boxes like a boss</a>
+                        </h4>
+                        <span class="meta">February 22 2018</span>
+                        <p class="paragraph">
+                            <a href="" class="link">
+                                Etiam viverra eros vitae molestie suscipit porcozpini.
+                                Suspendisse potenti. Donec a ex vitae erat accumsan porta sed at justo…
+                            </a>
+                        </p>
+                    </div>
+                    <div class="flex flex--full flex--column feed">
+                        <h4 class="title">
+                            <a href="" class="link">Frames click jacking on input boxes like a boss</a>
+                        </h4>
+                        <span class="meta">February 22 2018</span>
+                        <p class="paragraph">
+                            <a href="" class="link">
+                                Etiam viverra eros vitae molestie suscipit porcozpini.
+                                Suspendisse potenti. Donec a ex vitae erat accumsan porta sed at justo…
+                            </a>
+                        </p>
+                    </div>
+                    <div class="flex flex--full flex--column feed">
+                        <h4 class="title">
+                            <a href="" class="link">Frames click jacking on input boxes like a boss</a>
+                        </h4>
+                        <span class="meta">February 22 2018</span>
+                        <p class="paragraph">
+                            <a href="" class="link">
+                                Etiam viverra eros vitae molestie suscipit porcozpini.
+                                Suspendisse potenti. Donec a ex vitae erat accumsan porta sed at justo…
+                            </a>
+                        </p>
+                    </div>
+                </section>
+                <!--
+                    <section class="section section--ocean">
+                        <div class="flex flex--full flex--column feed">
+                            <p class="paragraph">
+                                <b>
+                                    Etiam viverra eros vitae molestie suscipit porcozpini.
+                                    Suspendisse potenti. Donec a ex vitae erat accumsan porta sed at justo.
+                                </b>
+                            </p>
+                        </div>
+                    </section>
+                -->
+                <section class="section section--prototype section--chips">
+                    <div class="flex flex--full flex--column donate">
+                        <img src="src/images/chips.png" alt="" class="image">
+                        <p class="paragraph">
+                            <b>
+                                I don't like coffee, but I like chips and other things
+                                so you can still <a href="" class="link">donate</a>. I will also
+                                keep creating great projects.
+                            </b>
+                        </p>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="flex flex--full flex--vertical feed">
+                        <div class="flex flex--semi">
+                            <h4 class="title"><a href="" class="link">Algorithms</a></h4>
+                        </div>
+                        <div class="flex flex--semi flex--right">
+                            <span class="meta">
+                                <i><b>687 publications</b></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex--full flex--vertical feed">
+                        <div class="flex flex--semi">
+                            <h4 class="title"><a href="" class="link">Design</a></h4>
+                        </div>
+                        <div class="flex flex--semi flex--right">
+                            <span class="meta">
+                                <i><b>521 publications</b></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex--full flex--vertical feed">
+                        <div class="flex flex--semi">
+                            <h4 class="title"><a href="" class="link">Programming</a></h4>
+                        </div>
+                        <div class="flex flex--semi flex--right">
+                            <span class="meta">
+                                <i><b>502 publications</b></i>
+                            </span>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </main>
+        <footer class="flex flex--full flex--center footer footer--triangle">
+            <div class="flex flex--center container">
+                <div class="flex flex--column container">
+                    <h4 class="title">NAVIGATION</h4>
+                    <nav class="flex flex--column nav">
+                        <a href="" class="nav__item">About Me</a>
+                        <a href="" class="nav__item">Blog</a>
+                        <a href="" class="nav__item">How To</a>
+                        <a href="" class="nav__item">Market</a>
+                    </nav>
+                </div>
+                <div class="flex flex--column container">
+                    <h4 class="title">LEGAL</h4>
+                    <nav class="flex flex--column nav">
+                        <a href="" class="nav__item">Privacy Policy</a>
+                        <a href="" class="nav__item">Cookie Policy</a>
+                        <a href="" class="nav__item">Terms of Service</a>
+                    </nav>
+                </div>
+                <div class="flex flex--column container">
+                    <h4 class="title">FOLLOW</h4>
+                    <nav class="flex flex--column nav">
+                        <a href="" class="nav__item">Twitter</a>
+                        <a href="" class="nav__item">Instagram</a>
+                        <a href="" class="nav__item">GitHub</a>
+                    </nav>
+                </div>
+                <div class="flex flex--column container">
+                    <h4 class="title">RECENT</h4>
+                    <nav class="flex flex--column nav">
+                        <a href="" class="nav__item">How to reload an iframe using JavaScript</a>
+                        <a href="" class="nav__item">Frames click jacking on input boxes like a boss</a>
+                        <a href="" class="nav__item">A complete guide to Flexbox</a>
+                        <a href="" class="nav__item">How to create a triangle using CSS</a>
+                    </nav>
+                </div>
+            </div>
+            <pre class="flex flex--full stream">
+                <span class="stream__text stream__text--repeat-y-2">
+                    &copy; 2018 Designed by Vasile Pește.
+                    
+                    (1 + √5) / 2
+                </span>
+                <span class="stream__text stream__text--repeat-y-2 stream__text--reverse-2">
+                    0100010001100101011100110110100101100111
+                    0110111001100101011001000010000001100010
+                    0111100100100000010101100110000101110011
+                    0110100101101100011001010010000001010000
+                    0110010110000110010111010001100101
+                    
+                                ______________
+                               /             /|
+                              /             / |
+                             /____________ /  |
+                            | ___________ |   |
+                            ||           ||   |
+                            ||           ||   |
+                            ||           ||   |
+                            ||___________||   |
+                            |   _______   |  /
+                            /|  (_______)  | /
+                            ( |_____________|/
+                            \
+                            .=======================.
+                            | ::::::::::::::::  ::: |
+                            | ::::::::::::::{}  ::: |
+                            |   -----------     ::: |
+                            `-----------------------'
+                </span>
+            </pre>
+        </footer>
+    </body>
+</html>
