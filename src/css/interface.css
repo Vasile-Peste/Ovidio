@@ -1246,3 +1246,23 @@ dl.list {
     padding: 8px 14px;
     border-radius: 999px;
 }
+
+/*
+ * @component preview
+*/
+
+.preview {
+    
+}
+.preview .title {
+    margin-bottom: 3px;
+}
+.preview .meta {
+    margin-bottom: 3px;
+}
+.preview .button {
+    margin-top: 12px;
+}
+.preview + .separator {
+    margin: 30px 0 22px 0;
+}
