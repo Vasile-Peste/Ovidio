@@ -187,6 +187,12 @@
     height: auto;
     transform: translate(15px, 11px);
 }
+.section--radio {
+    
+}
+.section--radio > *:first-child > .image:first-child {
+    
+}
 
 /*
  * @component title
