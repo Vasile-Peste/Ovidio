@@ -188,10 +188,15 @@
     transform: translate(15px, 11px);
 }
 .section--radio {
-    
+    margin-top: 74px;
 }
 .section--radio > *:first-child > .image:first-child {
-    
+    -webkit-user-select: none;
+    user-select: none;
+    margin: -68px auto 1px auto;
+    width: 206px;
+    height: auto;
+    transform: translate(18px, 7px);
 }
 
 /*
