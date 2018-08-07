@@ -177,14 +177,15 @@
         2px 1px 14px 2px rgba(1, 1, 1, 0.0092);
 }
 .section--chips {
-    margin-top: 61px;
+    margin-top: 66px;
 }
 .section--chips > *:first-child > .image:first-child  {
     -webkit-user-select: none;
     user-select: none;
-    margin: -40px auto 1px auto;
-    width: 206px;
+    margin: -68px auto 1px auto;
+    width: 256px;
     height: auto;
+    transform: translate(15px, 11px);
 }
 
 /*
