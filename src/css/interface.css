@@ -26,7 +26,8 @@
 */
 
 .container {
-    
+    margin: 0;
+    padding: 0;
 }
 
 /*
@@ -1256,7 +1257,8 @@ a.button:hover {
 */
 
 .preview {
-    
+    margin: 0;
+    padding: 0;
 }
 .preview .title {
     margin-bottom: 4px;
