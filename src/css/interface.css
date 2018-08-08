@@ -156,9 +156,27 @@
 }
 
 /*
- * @component section
+ * @component follow
 */
 
+.follow {
+    padding: 17px 20px;
+}
+.follow .paragraph {
+    margin: 0;
+    font-size: 15px;
+    color: rgb(31, 31, 32);
+}
+.follow * + .paragraph {
+    margin-top: 5px;
+}
+.follow .link {
+    text-shadow: 0 0 40px rgba(0, 0, 150, 0.08);
+}
+
+/*
+ * @component section
+*/
 
 .section {
     
