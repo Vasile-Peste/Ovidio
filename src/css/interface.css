@@ -501,6 +501,18 @@ h2.title--no-separator::before {
         0 0 20px rgb(0, 0, 0);
     color: rgb(234, 234, 234);
 }
+@media (max-width: 952px) {
+    .author {
+        flex-direction: column;
+        bottom: 107px;
+    }
+    .author > .image {
+        margin-bottom: 8px;
+    }
+    .author > .paragraph {
+        max-width: 446px;
+    }
+}
 
 /*
  * @component main
