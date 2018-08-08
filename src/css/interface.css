@@ -183,9 +183,9 @@
     -webkit-user-select: none;
     user-select: none;
     margin: -68px auto 1px auto;
-    width: 256px;
+    width: 254px;
     height: auto;
-    transform: translate(15px, 11px);
+    transform: translate(16px, 12px);
 }
 .section--radio {
     margin-top: 74px;
@@ -194,7 +194,7 @@
     -webkit-user-select: none;
     user-select: none;
     margin: -68px auto 1px auto;
-    width: 206px;
+    width: 204px;
     height: auto;
     transform: translate(18px, 7px);
 }
