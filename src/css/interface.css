@@ -460,6 +460,9 @@ h2.title--no-separator::before {
 .header--machine:hover > .stream > .stream__text:nth-child(1) {
     opacity: 0;
 }
+.header--machine:hover > .stream > .stream__text:nth-child(2) {
+    opacity: 0.42;
+}
 
 /*
  * @component author
