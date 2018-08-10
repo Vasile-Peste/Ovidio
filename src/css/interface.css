@@ -692,7 +692,7 @@ h2.title--no-separator::before {
     background-color: transparent;
 }
 .footer .nav__item:first-child {
-    margin-top: 8px;
+    margin-top: 4px;
 }
 .footer .nav__item {
     width: 100%;
@@ -742,6 +742,21 @@ h2.title--no-separator::before {
 	border-width: 42px 0 0 100vw;
 	border-color: rgb(255, 255, 255) transparent transparent transparent;
 	z-index: 1;
+}
+@media (max-width: 1216px) {
+    .footer > .stream {
+        display: none;
+    }
+    .footer > .container > .container {
+        width: 100%;
+        max-width: none;
+    }
+    .footer > .container > .container + .container {
+        margin-top: 15px;
+    }
+    .footer .nav__item:first-child {
+        margin-top: 2px;
+    }
 }
 
 /*
