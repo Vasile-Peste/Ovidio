@@ -443,7 +443,7 @@ h2.title--no-separator::before {
     z-index: 1;
 }
 .header--machine {
-
+    
 }
 .header--machine > .stream > .stream__text:nth-child(1),
 .header--machine > .stream > .stream__text:nth-child(2) {
