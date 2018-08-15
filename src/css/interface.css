@@ -1333,6 +1333,9 @@ a.button,
 a.button:hover {
     text-decoration: none;
 }
+.button + .button {
+    margin-left: 12px;
+}
 
 /*
  * @component preview
