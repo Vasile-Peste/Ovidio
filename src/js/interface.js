@@ -19,3 +19,22 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
 	
 });
+
+// Used to adapt the header menu items to mobile resolution.
+(function () {
+    function getPropertyValue (node, property) {
+        return getComputedStyle(node, null).getPropertyValue(property);
+    }
+    
+    function getItemsWidth () {
+        const menu = document.querySelector(".header .nav .flex--semi");
+        const items = menu.querySelectorAll(".nav__item");
+        let width = 0;
+        
+        for (const item of items) {
+            width += parseInt(getPropertyValue(item, "width"));
+        }
+        
+        return width;
+    }
+})();
