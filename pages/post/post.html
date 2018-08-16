@@ -14,31 +14,32 @@
     </head>
     <body class="flex flex--full">
         <header class="flex flex--full header header--triangle">
-            <!-- Header. -->
             <div class="flex flex--full container">
                 <nav class="flex flex--full flex--vertical nav">
-                    <!-- Left layout. -->
+                    <!-- Left Layout -->
                     <div class="flex flex--semi">
                         <a href="" class="nav__item">ABOUT ME</a>
                         <a href="" class="nav__item">BLOG</a>
-                        <a href="" class="nav__item">HOW TO</a>
                         <div class="nav__item nav__item--parent">
-                            MARKET
+                            THEME
                             <nav class="nav">
                                 <div class="flex flex--full">
                                     <!-- Sub menu content. -->
                                 </div>
                             </nav>
                         </div>
+                        <a href="" class="nav__item">HOW TO</a>
                     </div>
-                    <!-- Right layout. -->
+                    <!-- / Left Layout -->
+                    <!-- Right Layout -->
                     <div class="flex flex--semi flex--end flex--right">
                         <input type="text" class="input input--text search" placeholder="Search…">
                     </div>
+                    <!-- / Right Layout -->
                 </nav>
             </div>
             <aside class="flex flex--full flex--center flex--vertical author">
-                <img src="../../src/images/author_1.jpg" alt="" class="image">
+                <img src="../../src/images/author.png" alt="" class="image">
                 <p class="paragraph">
                     «Nullam elementum blandit molestie. Maecenas lacus diam,
                     mattis eu orci et, facilisis vulputate leo.
@@ -79,10 +80,8 @@
                 </span>
             </pre>
         </header>
-        <main class="flex flex--full flex--center main">
-            <!-- Main. -->
-            <article class="article article--spaced">
-                <!-- Article. -->
+        <main class="flex flex--full flex--center">
+            <article class="main main--spaced">
                 <aside class="flex flex--full meta">
                     <span class="meta">February 22 2018, <a href="" class="link">Vasile Pește</a>, tagged in <a href="" class="link">Algorithms</a>, <a href="" class="link">Design</a></span>
                 </aside>
@@ -143,8 +142,8 @@ function sort (arr) {
                 </p>
                 <hr class="flex flex--full separator">
                 <aside class="flex flex--full comments">
-                    <div class="flex flex--full flex--vertical comment">
-                        <img src="../../src/images/author.jpg" alt="" class="image">
+                    <div class="flex flex--full flex--vertical comment comment--without-margin-top">
+                        <img src="../../src/images/author.png" alt="" class="image">
                         <div class="flex flex--column container">
                             <span class="meta">Vasile Pește says:</span>
                             <p class="paragraph">
@@ -156,7 +155,7 @@ function sort (arr) {
                         </div>
                     </div>
                     <div class="flex flex--full flex--vertical comment">
-                        <img src="../../src/images/author.jpg" alt="" class="image">
+                        <img src="../../src/images/author.png" alt="" class="image">
                         <div class="flex flex-column container">
                             <span class="meta">Vasile Pește says:</span>
                             <p class="paragraph">
@@ -168,7 +167,7 @@ function sort (arr) {
                         </div>
                     </div>
                     <div class="flex flex--full flex--vertical comment">
-                        <img src="../../src/images/author.jpg" alt="" class="image">
+                        <img src="../../src/images/author.png" alt="" class="image">
                         <div class="flex flex--column container">
                             <span class="meta">Vasile Pește says:</span>
                             <p class="paragraph">
@@ -178,7 +177,7 @@ function sort (arr) {
                         </div>
                     </div>
                     <div class="flex flex--full flex--vertical comment">
-                        <img src="../../src/images/author.jpg" alt="" class="image">
+                        <img src="../../src/images/author.png" alt="" class="image">
                         <div class="flex flex--column container">
                             <span class="meta">Vasile Pește says:</span>
                             <p class="paragraph">
@@ -190,7 +189,7 @@ function sort (arr) {
                         </div>
                     </div>
                     <div class="flex flex--full flex--vertical comment">
-                        <img src="../../src/images/author.jpg" alt="" class="image">
+                        <img src="../../src/images/author.png" alt="" class="image">
                         <div class="flex flex--column container">
                             <span class="meta">Vasile Pește says:</span>
                             <p class="paragraph">
@@ -260,18 +259,17 @@ function sort (arr) {
                         </p>
                     </div>
                 </section>
-                <!--
-                    <section class="section section--ocean">
-                        <div class="flex flex--full flex--column feed">
-                            <p class="paragraph">
-                                <b>
-                                    Etiam viverra eros vitae molestie suscipit porcozpini.
-                                    Suspendisse potenti. Donec a ex vitae erat accumsan porta sed at justo.
-                                </b>
-                            </p>
-                        </div>
-                    </section>
-                -->
+                <section class="section section--prototype section--radio">
+                    <div class="flex flex--full flex--column follow">
+                        <img src="../../src/images/radio.png" alt="" class="image">
+                        <p class="paragraph">
+                            <b>
+                                Want to be keep updated about my projects?
+                                You can follow me on <a href="" class="link">Instagram</a>.
+                            </b>
+                        </p>
+                    </div>
+                </section>
                 <section class="section section--prototype section--chips">
                     <div class="flex flex--full flex--column donate">
                         <img src="../../src/images/chips.png" alt="" class="image">
@@ -318,10 +316,10 @@ function sort (arr) {
                 </section>
             </aside>
         </main>
-        <footer class="flex flex--full footer footer--triangle">
-            <div class="flex flex--center container">
+        <footer class="flex flex--full flex--center footer footer--triangle">
+            <div class="flex container">
                 <div class="flex flex--column container">
-                    <h4 class="title">PAGES</h4>
+                    <h4 class="title">NAVIGATION</h4>
                     <nav class="flex flex--column nav">
                         <a href="" class="nav__item">About Me</a>
                         <a href="" class="nav__item">Blog</a>

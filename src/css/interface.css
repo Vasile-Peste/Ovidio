@@ -31,29 +31,29 @@
 }
 
 /*
- * @component article
+ * @component main
 */
 
-.article {
+.main {
     width: 96%;
     max-width: 773px;
     margin: 0;
     padding: 25px;
     background-color: rgb(255, 255, 255);
 }
-.article--spaced {
+.main--spaced {
     margin: 23px 0 47px 0;
 }
-.article--expanded {
+.main--expanded {
     max-width: 923px;
 }
-.article + .side-bar {
+.main + .side-bar {
     margin-left: 70px;
 }
-.article .image {
+.main .image {
     border-radius: 6px;
 }
-.article * + .image {
+.main * + .image {
     margin-top: 17px;
 }
 
@@ -537,14 +537,6 @@ h2.title--no-separator::before {
     .author > .paragraph {
         max-width: 446px;
     }
-}
-
-/*
- * @component main
-*/
-
-.main {
-    background-color: rgb(255, 255, 255);
 }
 
 /*
