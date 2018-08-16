@@ -1,4 +1,4 @@
-// Used to auto focus (oh hover) and auto blur (on pointer leave) the search bar in the header.
+// Used to auto focus (on hover) and auto blur (on pointer leave) the search bar in the header.
 document.addEventListener("DOMContentLoaded", function () {
 	const search = document.getElementsByClassName("search")[0];
 	
