@@ -11,6 +11,14 @@
 /* *********************************************************************************************************** */
 
 /*
+ * @modifier invisible
+*/
+
+.--invisible {
+    display: none;
+}
+
+/*
  * @modifier no-select
  * @desc Makes an element unselectable.
 */
