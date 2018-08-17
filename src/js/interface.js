@@ -20,21 +20,38 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 });
 
-// Used to adapt the header menu items to mobile resolution.
+// Used to enable / disable the hamburger menu depending on the items inside the header menu and the width of the viewport.
 (function () {
     function getPropertyValue (node, property) {
         return getComputedStyle(node, null).getPropertyValue(property);
     }
     
-    function getItemsWidth () {
-        const menu = document.querySelector(".header .nav .flex--semi");
-        const items = menu.querySelectorAll(".nav__item");
+    function getMenuItemsWidth () {
+        const items = document.querySelectorAll(".header .nav .flex--semi .nav__item");
         let width = 0;
         
         for (const item of items) {
             width += parseInt(getPropertyValue(item, "width"));
+            width += parseInt(getPropertyValue(item, "margin-left"));
+            width += parseInt(getPropertyValue(item, "margin-right"));
         }
         
         return width;
     }
+    
+    function update () {
+        const offset = 20;
+        const layout = document.querySelector(".header .nav .flex--semi");
+        
+        if ((offset + getMenuItemsWidth()) >= parseInt(getPropertyValue(layout, "width"))) {
+            // Enable hamburger menu.
+        }
+        else {
+            // Disable hamburger menu.
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", update);
+    window.addEventListener("load", update);
+    window.addEventListener("resize", update);
 })();
