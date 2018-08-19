@@ -187,7 +187,7 @@
 */
 
 .section {
-    
+    position: relative;
 }
 * + .section {
     margin-top: 24px;
@@ -223,6 +223,35 @@
     width: 204px;
     height: auto;
     transform: translate(18px, 7px);
+}
+.section--triangle {
+    background-color: rgb(0, 0, 0);
+}
+.section--triangle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+	height: 0;
+	margin: 0;
+    padding: 0;
+	border-style: solid;
+	border-width: 42px 0 0 100vw;
+	border-color: rgb(255, 255, 255) transparent transparent transparent;
+	z-index: 1;
+}
+.section--triangle::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border-style: solid;
+    border-width: 0 0 42px 100vw;
+    border-color: transparent transparent rgb(255, 255, 255) transparent;
+    z-index: 1;
 }
 
 /*
