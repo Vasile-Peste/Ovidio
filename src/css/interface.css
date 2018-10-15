@@ -270,10 +270,10 @@ h1.title {
     line-height: 1.2;
 }
 h1.title + .paragraph {
-    margin-top: 23px;
+    margin-top: 13px;
 }
 h2.title {
-    margin-bottom: 12px;
+    margin-bottom: 2px;
     font-size: 29px;
 }
 h2.title::before {
@@ -291,7 +291,7 @@ h2.title::before {
     border-radius: 23%;
 }
 h3.title {
-    margin: 11px 0 6px 0;
+    margin: 11px 0 1px 0;
     font-size: 22px;
 }
 h2.title--no-separator::before {
