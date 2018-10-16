@@ -759,6 +759,7 @@ h2.title--no-separator::before {
         0 0 8px rgb(0, 0, 0),
         0 0 14px rgb(0, 0, 0),
         0 0 20px rgb(0, 0, 0);
+    letter-spacing: 0.01rem;
     color: rgb(139, 139, 139);
 }
 .footer .nav__item:hover {
