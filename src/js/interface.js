@@ -1,3 +1,4 @@
+/* DISABLED.
 // Used to auto focus (on hover) and auto blur (on pointer leave) the search bar in the header.
 document.addEventListener("DOMContentLoaded", function () {
 	const search = document.getElementsByClassName("search")[0];
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		this.blur();
 	});
 });
+*/
 
 // Used to auto update the animation in the header and in the footer.
 document.addEventListener("DOMContentLoaded", function () {
