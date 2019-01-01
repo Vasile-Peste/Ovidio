@@ -258,7 +258,10 @@
  * @component title
 */
 
-.title {
+.title,
+.post h1,
+.post h2,
+.post h3 {
     margin: 0;
     padding: 0;
     font-size: 40px;
@@ -266,17 +269,21 @@
     letter-spacing: -0.06rem;
     color: rgb(0, 0, 0);
 }
-h1.title {
+h1.title,
+.post h1 {
     line-height: 1.2;
 }
-h1.title + .paragraph {
+h1.title + .paragraph,
+.post h1 + p {
     margin-top: 13px;
 }
-h2.title {
+h2.title,
+.post h2 {
     margin-bottom: 2px;
     font-size: 29px;
 }
-h2.title::before {
+h2.title::before,
+.post h2::before {
     content: "";
     display: block;
     width: 100%;
@@ -290,7 +297,8 @@ h2.title::before {
     );
     border-radius: 23%;
 }
-h3.title {
+h3.title,
+.post h3 {
     margin: 11px 0 1px 0;
     font-size: 22px;
 }
@@ -302,7 +310,8 @@ h2.title--no-separator::before {
  * @component paragraph
 */
 
-.paragraph {
+.paragraph,
+.post p {
     margin: 0;
     padding: 0;
     font-size: 18px;
@@ -311,7 +320,8 @@ h2.title--no-separator::before {
     letter-spacing: -0.04rem;
     color: rgb(24, 24, 24);
 }
-.paragraph + .paragraph {
+.paragraph + .paragraph,
+.post p + p {
     margin-top: 24px;
 }
 .paragraph--abstract::before {
@@ -339,7 +349,8 @@ h2.title--no-separator::before {
  * @component separator
 */
 
-.separator {
+.separator,
+.post hr {
     margin: 46px 0;
     padding: 0;
     background-color: transparent;
@@ -351,7 +362,8 @@ h2.title--no-separator::before {
  * @component pre
 */
 
-.pre {
+.pre,
+.post pre {
     overflow-x: scroll;
     width: 100%;
     margin: 23px 0;
@@ -1229,13 +1241,25 @@ h2.title--no-separator::before {
  * @component list
 */
 
-.list {
+.list,
+.post ul,
+.post ol,
+.post dl {
     margin: 17px 17px 17px 40px;
     padding: 0;
     color: rgb(20, 20, 20);
 }
-.list li {
+.list li,
+.post ul li,
+.post ol li,
+.post dl li {
     font-size: 17px;
+}
+.list li + li,
+.post ul li + li,
+.post ol li + li,
+.post dl li + li {
+    margin-top: 7px;
 }
 ul.list {
     
