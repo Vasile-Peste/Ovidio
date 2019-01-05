@@ -6,7 +6,7 @@ Designed for websites about information technology and programming.
 ![](screenshots/16:08:2018.png)
 
 ## Issues
-Do not hesitate to create an issue even for the most irrelevant thing. Feel free to correct my English, recommend a better way to use Git or anything you think could be useful and instructive.
+Do not hesitate to create an issue even for the most irrelevant thing: feel free to correct my English, recommend a better way to use Git or anything you think could be useful and instructive.
 
 ## Design
 Each class in this project is considered and referenced as a unique UI component (in all style sheets and in all commit messages). All class names are following and must follow the BEM convention. All properties are not vendor prefixed in order to maintain the code clean and readable, properties are automatically vendor prefixed in production.
@@ -18,5 +18,5 @@ Implement this theme for the following systems.
 - [ ] Jekyll
 - [ ] Joomla!
 
-## Contact the Author
-vasile.peste@protonmail.ch.
+## Credits and Contacts
+Author: Vasile Pește (vasile.peste@protonmail.ch).
