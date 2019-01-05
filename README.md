@@ -1,5 +1,5 @@
-# Abstract Language
-Abstract Language is a theme designed from scratch with zero dependencies.
+# Ovidio
+Ovidio is a theme designed by Vasile Pește from scratch with zero dependencies.
 Designed for websites about information technology and programming.
 
 ## Overview
