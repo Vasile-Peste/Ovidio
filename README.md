@@ -3,6 +3,7 @@ Ovidio is a theme designed by Vasile Pește from scratch with zero dependencies.
 Designed for websites about information technology and programming.
 
 ## Overview
+Live preview is available: [Ovidio preview](https://www.malgol.com/archive/Ovidio/).
 ![](screenshots/16:08:2018.png)
 
 ## Issues
