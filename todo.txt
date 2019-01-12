@@ -1,8 +1,0 @@
-* Complete design for footer.
-* Complete design for links with arrow.
-* Move tags at the end of the article, and create new style for them.
-* Introduce a bit of Japanese style (Japanese typography?).
-* Implement for "WordPress".
-* Implement for "Ghost".
-* Implement for "Jekyll".
-* Implement for "Joomla!".
