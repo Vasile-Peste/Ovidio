@@ -354,10 +354,10 @@ h2.title--no-separator::before {
 .post pre {
     overflow-x: scroll;
     width: 100%;
-    margin: 23px 0;
+    margin: 11px 0;
     padding: 18px 25px;
     font-family: "Courier";
-    font-size: 14px;
+    font-size: 15px;
 }
 
 /*
