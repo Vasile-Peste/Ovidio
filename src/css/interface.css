@@ -33,6 +33,7 @@
 .main {
     width: 96%;
     max-width: 773px;
+    min-height: 60vh;
     margin: 0;
     padding: 25px;
     background-color: rgb(255, 255, 255);
