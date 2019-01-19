@@ -33,7 +33,7 @@
 .main {
     width: 96%;
     max-width: 773px;
-    min-height: 60vh;
+    /* min-height: 60vh; */
     margin: 0;
     padding: 25px;
     background-color: rgb(255, 255, 255);
@@ -264,11 +264,11 @@ h1.title,
 }
 h1.title + .paragraph,
 .post h1 + p {
-    margin-top: 13px;
+    margin-top: 12px;
 }
 h2.title,
 .post h2 {
-    margin-bottom: 2px;
+    margin-bottom: 3px;
     font-size: 29px;
 }
 h2.title::before,
@@ -926,7 +926,8 @@ h2.title--no-separator::before {
  * @component link
 */
 
-.link {
+.link,
+.post a {
     font-weight: inherit;
     font-style: inherit;
     font-size: inherit;
@@ -936,7 +937,8 @@ h2.title--no-separator::before {
 .link--active {
     text-decoration: underline;
 }
-.link:hover {
+.link:hover,
+.post a:hover {
     text-decoration: underline;
 }
 
