@@ -31,15 +31,40 @@
 */
 
 .main {
+    position: relative;
     width: 96%;
-    max-width: 773px;
-    /* min-height: 60vh; */
-    margin: 0;
-    padding: 25px;
+    max-width: 1073px;
+    margin: -98px 0 0 0;
+    padding: 48px 62px;
     background-color: rgb(255, 255, 255);
+    background-image: radial-gradient(rgb(255, 255, 255), rgb(251, 251, 251));
 }
-.main--spaced {
-    margin: 23px 0 47px 0;
+.main,
+.main::before,
+.main::after {
+    box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.06);
+    border: 1px solid rgb(224, 224, 224);
+}
+.main::before,
+.main::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 98%;
+}
+.main::before {
+    right: 18px;
+    top: 0;
+    transform: rotate(-2deg);
+    z-index: -1;
+    background-color: rgb(253, 253, 253);
+}
+.main::after {
+    right: -5px;
+    top: 5px;
+    transform: rotate(3deg);
+    z-index: -2;
+    background-color: rgb(251, 251, 251);
 }
 .main--expanded {
     max-width: 883px;
@@ -254,13 +279,16 @@
     margin: 0;
     padding: 0;
     font-size: 40px;
-    font-weight: 600;
-    letter-spacing: -0.06rem;
-    color: rgb(0, 0, 0);
+    font-weight: 400;
+    letter-spacing: -0.058rem;
+    color: rgba(18, 18, 18, 0.91);
 }
 h1.title,
 .post h1 {
-    line-height: 1.2;
+    line-height: 48px;
+}
+h1.title + .separator {
+	margin: 7px 0 26px 0;
 }
 h1.title + .paragraph,
 .post h1 + p {
@@ -269,6 +297,7 @@ h1.title + .paragraph,
 h2.title,
 .post h2 {
     margin-bottom: 3px;
+    line-height: 39px;
     font-size: 29px;
 }
 h2.title::before,
@@ -302,12 +331,12 @@ h2.title--no-separator::before {
 .paragraph,
 .post p {
     margin: 0;
-    padding: 0;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 1.4;
-    letter-spacing: -0.04rem;
-    color: rgb(24, 24, 24);
+	padding: 0;
+	font-size: 19px;
+	font-weight: 300;
+	line-height: 30px;
+    letter-spacing: -0.037rem;
+    color: rgba(28, 28, 28, 0.980968);
 }
 .paragraph + .paragraph,
 .post p + p {
@@ -318,7 +347,7 @@ h2.title--no-separator::before {
     margin: 0;
     padding: 0;
     font-size: inherit;
-    font-weight: 600;
+    font-weight: 400;
     color: inherit;
 }
 
@@ -330,8 +359,11 @@ h2.title--no-separator::before {
     margin: 0;
     padding: 0;
     font-size: 14px;
-    font-weight: 600;
-    color: rgb(0, 0, 0);
+    font-weight: 400;
+    color: rgba(21, 21, 21, 0.91);
+}
+.post .meta {
+    text-transform: uppercase;
 }
 
 /*
@@ -353,10 +385,17 @@ h2.title--no-separator::before {
 
 .pre,
 .post pre {
-    overflow-x: scroll;
+    overflow-x: auto;
     width: 100%;
-    margin: 11px 0;
-    padding: 18px 25px;
+    margin: 24px 0;
+    padding: 18px 20px;
+	border: 1px solid rgba(0, 0, 0, 0.0833333);
+	border-radius: 6px;
+}
+.pre,
+.pre *,
+.post pre,
+.post pre * {
     font-family: "Courier";
     font-size: 15px;
 }
@@ -367,7 +406,7 @@ h2.title--no-separator::before {
 
 .highlight {
     margin: 0;
-    padding: 1px 5px;
+    padding: 1px 5px 2px 5px;
     background-image: linear-gradient(
         to top right,
         rgba(0, 0, 0, 0.04),
@@ -378,6 +417,7 @@ h2.title--no-separator::before {
         0 1px 8px 2px rgba(1, 1, 1, 0.0092);
     border-radius: 3px;
     font-family: "Courier";
+    color: rgba(41, 41, 41, 0.98);
 }
 
 /*
@@ -385,7 +425,9 @@ h2.title--no-separator::before {
 */
 
 .header {
+    overflow: hidden;
     position: relative;
+    max-width: 100%;
     background-color: rgb(0, 0, 0);
     background-image: linear-gradient(
         -182deg,
@@ -401,6 +443,7 @@ h2.title--no-separator::before {
 .header > .container > .nav {
     background-color: rgb(0, 0, 0);
 }
+/* Used for the fade-in effect of .stream. */
 .header > .container > .nav::after {
     content: "";
     position: absolute;
@@ -417,8 +460,9 @@ h2.title--no-separator::before {
     );
 }
 .header .nav__item {
-    font-weight: 600;
-    font-size: 14px;
+	text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
     color: rgb(240, 240, 240);
 }
 .header > .stream {
@@ -463,7 +507,7 @@ h2.title--no-separator::before {
 	padding: 0;
 	border-style: solid;
 	border-width: 0 0 42px 100vw;
-	border-color: transparent transparent rgb(255, 255, 255) transparent;
+	border-color: transparent transparent rgb(252, 252, 252) transparent;
 	z-index: 1;
 }
 .header--triangle-center::after {
@@ -477,7 +521,7 @@ h2.title--no-separator::before {
     padding: 0;
     border-left: 50vw solid transparent;
     border-right: 50vw solid transparent;
-    border-bottom: 30px solid rgb(255, 255, 255);
+    border-bottom: 30px solid rgb(252, 252, 252);
     z-index: 1;
 }
 .header--machine {
@@ -562,12 +606,13 @@ h2.title--no-separator::before {
         0 0 8px rgb(0, 0, 0),
         0 0 14px rgb(0, 0, 0),
         0 0 20px rgb(0, 0, 0);
+    line-height: 23px;
     color: rgb(234, 234, 234);
 }
 @media (max-width: 952px) {
     .author {
         flex-direction: column;
-        bottom: 107px;
+        bottom: 92px;
     }
     .author > .image {
         margin-bottom: 8px;
@@ -576,6 +621,12 @@ h2.title--no-separator::before {
         max-width: 446px;
     }
 }
+@media (max-width: 407px) {
+	.author {
+		bottom: 79px;
+	}
+}
+
 
 /*
  * @component stream
@@ -595,22 +646,21 @@ h2.title--no-separator::before {
     cursor: default;
     -webkit-user-select: none;
     user-select: none;
-    /* Use fixed for a parallax effect (with a lot of bugs); use absolute for a static effect. */
+    /* Use fixed for a parallax effect (with a lot of bugs); use absolute for a static effect without bugs. */
     position: absolute;
     margin: 0;
     padding: 0;
     background-color: rgb(0, 0, 0);
-    /* TODO Decrease font-size for lower resolutions in order to fit the screen (maybe using media query). */
+    /* TODO: Decrease font-size for lower resolutions in order to fit the screen (maybe using media query). */
     font-size: 12px;
     font-family: "Courier";
     color: rgb(223, 223, 223);
 }
-/* Used for the header animation. */
 .stream__text--repeat-y {
     --translation-height: 323px;
     --translation-duration: 8s;
 
-    will-change: transform;
+    will-change: transform !important;
     animation-duration: var(--translation-duration);
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -638,12 +688,11 @@ h2.title--no-separator::before {
         transform: rotateY(-45deg) translateY(var(--translation-height));
     }
 }
-/* Used for the footer animation. */
 .stream__text--repeat-y-2 {
     --translation-height: 380px;
     --translation-duration: 12.411764705882353s;
 
-    will-change: transform;
+    will-change: transform !important;
     animation-duration: var(--translation-duration);
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -677,14 +726,31 @@ h2.title--no-separator::before {
 */
 
 .footer {
+    overflow: hidden;
     position: relative;
-    margin: 0;
+    max-width: 100%;
+    margin: -95px 0 0 0;
     padding: 0;
     background-color: rgb(0, 0, 0);
     background-image: linear-gradient(
         2deg,
         rgb(0, 0, 0) 70%,
         rgba(43, 43, 43, 0.04)
+    );
+}
+.footer::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+	height: 38px;
+	margin: 0;
+    padding: 0;
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(0, 0, 0)
     );
 }
 .footer > .stream {
@@ -705,7 +771,7 @@ h2.title--no-separator::before {
     right: 63px;
 }
 .footer > .container {
-    margin: 91px auto 81px auto;
+    margin: 161px auto 61px auto;
     z-index: 1;
 }
 .footer > .container > .container {
@@ -726,7 +792,7 @@ h2.title--no-separator::before {
 }
 .footer .title {
     padding: 0 9px;
-    font-weight: 600;
+    font-weight: 400;
     text-shadow:
         0 0 4px rgb(0, 0, 0),
         0 0 8px rgb(0, 0, 0),
@@ -739,6 +805,7 @@ h2.title--no-separator::before {
     cursor: default;
     -webkit-user-select: none;
     user-select: none;
+	text-transform: uppercase;
     font-size: 12px;
 }
 .footer .nav {
@@ -754,7 +821,7 @@ h2.title--no-separator::before {
     margin: 0;
     padding: 9px;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 400;
     text-shadow:
         0 0 4px rgb(0, 0, 0),
         0 0 8px rgb(0, 0, 0),
@@ -796,7 +863,7 @@ h2.title--no-separator::before {
     padding: 0;
 	border-style: solid;
 	border-width: 42px 0 0 100vw;
-	border-color: rgb(255, 255, 255) transparent transparent transparent;
+	border-color: rgb(252, 252, 252) transparent transparent transparent;
 	z-index: 1;
 }
 @media (max-width: 1216px) {
@@ -824,10 +891,8 @@ h2.title--no-separator::before {
     margin: 0;
     padding: 18px 50px;
     background-color: transparent;
-    z-index: var(--max-index);
+    z-index: 4096;
 }
-
-/* Begin of child menu. */
 .nav .nav {
     display: none;
     position: absolute;
@@ -848,8 +913,6 @@ h2.title--no-separator::before {
 .nav .nav:hover {
     display: initial;
 }
-/* End of child menu. */
-
 .nav__item {
     transition: color 300ms;
     -webkit-user-select: none;
@@ -880,7 +943,6 @@ h2.title--no-separator::before {
         width: 100%;
     }
 */
-
 .nav__item--parent {
     cursor: default;
     transition: initial;
@@ -905,7 +967,6 @@ h2.title--no-separator::before {
     border-top-color: rgb(157, 157, 157);
     transform: translateY(-34%) rotate(180deg);
 }
-
 .nav__item--pointer {
     padding-right: 22px;
 }
@@ -928,17 +989,13 @@ h2.title--no-separator::before {
 
 .link,
 .post a {
-    font-weight: inherit;
     font-style: inherit;
     font-size: inherit;
-    text-decoration: none;
-    color: rgb(0, 106, 218);
+    font-weight: inherit;
+    text-decoration: underline;
+    color: inherit;
 }
 .link--active {
-    text-decoration: underline;
-}
-.link:hover,
-.post a:hover {
     text-decoration: underline;
 }
 
@@ -950,8 +1007,10 @@ h2.title--no-separator::before {
     margin: 0;
     padding: 0;
     border: none;
+	border-radius: 0;
     outline: 0;
     appearance: none;
+	-webkit-appearance: none;
 }
 .input--text {
     transition: border-color 211ms;
@@ -959,32 +1018,31 @@ h2.title--no-separator::before {
     background-color: transparent;
     border-bottom: 1px solid rgb(207, 207, 207);
     font-size: 15px;
+	font-weight: 400;
     color: rgb(254, 254, 254);
 }
 .input--text:focus {
     border-color: rgb(252, 252, 252);
-}
-.input--bold {
-    font-weight: 600;
+	outline: 0;
 }
 
 /*
- * @component search
+ * @component header-search-input
 */
 
-.search {
+#header-search-input {
     transition:
-        max-width 312ms,
+    	max-width 312ms,
         border-color 211ms;
-    width: 90%;
+	width: 90%;
     max-width: 256px;
     margin: 0 18px;
 }
-.search:focus {
-    max-width: 312px;
+#header-search-input:focus {
+	max-width: 312px;
 }
-.search::placeholder {
-    color: rgb(192, 192, 192);
+#header-search-input::placeholder {
+	color: rgb(192, 192, 192);
 }
 
 /*
@@ -1002,54 +1060,28 @@ h2.title--no-separator::before {
 }
 
 /*
- * @component promotion
- * This should be placed before the .footer node.
+ * @component suggested
+ * This should be placed before .footer.
 */
 
-.promotion {
-
+.suggested {
+    padding: 60px 0 30px 0;
 }
-.promotion--orange {
-    background-image: linear-gradient(
-        to bottom,
-        rgb(230, 197, 77),
-        rgb(248, 179, 77)
-    );
+.suggested--gray {
+    background-color: rgb(245, 247, 248);
 }
-.promotion--orange + .footer::before {
-    border-top-color: rgb(248, 179, 77);
+.suggested--gray + .footer::before {
+    border-top-color: rgb(245, 247, 248);
 }
-.promotion--purple {
-    background-image: linear-gradient(
-        to bottom,
-        #8f94fb,
-        #4e54c8
-    );
-}
-.promotion--purple + .footer::before {
-    border-top-color: #4e54c8;
-}
-.promotion h3.title {
-    margin: 62px auto 5px auto;
-    color: rgb(240, 240, 240);
-}
-.promotion .input--text {
-    width: 90%;
-    max-width: 300px;
-    margin: 5px auto 62px auto;
-    border-bottom: 2px solid rgb(241, 241, 241);
-    font-weight: 600;
-    font-size: 18px;
-}
-.promotion .input--text::placeholder {
-    color: rgb(250, 250, 250);
+.suggested .title {
+    margin: 0 0 15px 0;
 }
 
 /*
  * @component comment
  * @example
  * <div class="flex flex--full flex--vertical comment">
- *     <img src="src/images/author.jpg" alt="" class="image">
+ *     <img src="" alt="" class="image">
  *     <div class="flex container">
  *         <span class="meta">Vasile Pește</span>
  *         <p class="paragraph">
@@ -1063,13 +1095,10 @@ h2.title--no-separator::before {
 */
 
 .comment {
-    margin: 17px 0;
+    margin: 0;
 }
-.comment--without-margin-top {
-    margin-top: 0;
-}
-.comment--without-margin-bottom {
-    margin-bottom: 0;
+.comment + .comment {
+	margin-top: 28px;
 }
 .comment > .container:nth-child(1) {
     max-width: 20%;
@@ -1157,6 +1186,7 @@ h2.title--no-separator::before {
     margin: 20px 0 0 0;
     padding: 0;
 }
+.pagination,
 .pagination * {
     -webkit-user-select: none;
     user-select: none;
@@ -1169,18 +1199,19 @@ h2.title--no-separator::before {
     height: 32px;
     background-image: linear-gradient(
         to top right,
-        rgb(244, 244, 244),
-        rgb(234, 234, 234)
+        rgba(244, 244, 244, 0.98),
+        rgba(234, 234, 234, 0.98)
     );
     border-radius: 50%;
     box-shadow:
         inset 0 0 6px 1px rgba(0, 0, 0, 0.021),
-        0 1px 8px 2px rgba(1, 1, 1, 0.0092);
+        0 1px 8px 2px rgba(1, 1, 1, 0.0022);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
     line-height: 32px;
-    color: rgb(26, 26, 26);
+    text-decoration: none;
+    color: rgba(26, 26, 26, 0.976455);
 }
 .pagination .link::before {
     transition: 282ms background-color;
@@ -1196,7 +1227,7 @@ h2.title--no-separator::before {
 .pagination .link:hover,
 .pagination .link--active {
     text-decoration: none;
-    color: rgb(0, 106, 218);
+    color: rgba(0, 106, 218, 0.982222);
 }
 .pagination .link:hover::before,
 .pagination .link--active::before {
@@ -1206,7 +1237,7 @@ h2.title--no-separator::before {
     cursor: default;
     margin: 0 6px;
     font-size: 36px;
-    color: rgb(26, 26, 26);
+    color: rgba(26, 26, 26, 0.976455);
     transform: translateY(-20%);
 }
 
@@ -1224,8 +1255,35 @@ h2.title--no-separator::before {
  * @component image
 */
 
-.image {
-    width: 100%;
+.image,
+.post img {
+	margin: 5px 0;
+}
+.image--stretch {
+	width: 100%;
+}
+.image--pixelated {
+	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-pixelated;
+	image-rendering: pixelated;
+}
+
+/*
+ * @component wp-block-image
+*/
+
+.wp-block-image {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.wp-block-image--pixelated {
+	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-pixelated;
+	image-rendering: pixelated;
 }
 
 /*
@@ -1244,7 +1302,7 @@ h2.title--no-separator::before {
 .post ul li,
 .post ol li,
 .post dl li {
-    font-size: 16px;
+    font-size: 19px;
 }
 .list li + li,
 .post ul li + li,
@@ -1333,10 +1391,11 @@ dl.list {
     background-color: rgba(30, 136, 248, 0.13);
     border-radius: 3px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.005);
-    font-size: 14px;
-    font-weight: 600;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
     letter-spacing: 0.03rem;
-    color: rgb(68, 68, 68);
+    color: rgba(58, 57, 58, 0.99);
 }
 /*
     .button::before {
@@ -1363,8 +1422,8 @@ dl.list {
     }
 */
 .button:hover {
-    background-color: rgba(30, 136, 248, 0.19);
-    color: rgb(52, 52, 51);
+    background-color: rgba(29, 136, 247, 0.183312);
+    color: rgba(42, 42, 41, 0.962312);
 }
 .button--small {
     padding: 4px 8px;
@@ -1391,13 +1450,15 @@ a.button:hover {
     padding: 0;
 }
 .preview .title {
-    margin-bottom: 4px;
+    margin-bottom: 0;
+    color: rgba(11, 11, 11, 0.91);
 }
 .preview .meta {
-    margin-bottom: 2px;
+    margin: 8px 0;
+    text-transform: uppercase;
 }
 .preview .button {
-    margin-top: 17px;
+    margin: 28px 0 7px 0;
 }
 .preview + .separator {
     margin: 30px 0 22px 0;
@@ -1407,4 +1468,141 @@ a.button:hover {
 }
 .preview + .pagination {
     margin-top: 37px;
+}
+
+/*
+ * @component wp-block-embed-youtube
+*/
+
+.wp-block-embed-youtube {
+	width: 100% !important;
+	margin: 26px 0 !important;
+}
+.wp-block-embed-youtube iframe[src^="https://www.youtube.com"] {
+	display: table !important;
+	width: 92% !important;
+	height: 360px !important;
+	margin: 0 auto !important;
+	padding: 0 !important;
+}
+
+/*
+ * @component token
+ * @desc prism.js
+*/
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #7D8B99;
+}
+.token.punctuation {
+	color: #5F6364;
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #c92c2c;
+}
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.function,
+.token.builtin,
+.token.inserted {
+	color: #2f9c0a;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+	color: #a67f59;
+	background: rgba(255, 255, 255, 0.5);
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+	color: #1990b8;
+}
+.token.regex,
+.token.important {
+	color: #e90;
+}
+.language-css .token.string,
+.style .token.string {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(166, 127, 89);
+}
+.token.important {
+	font-weight: normal;
+}
+.token.bold {
+	font-weight: 400;
+}
+.token.italic {
+	font-style: italic;
+}
+.token.entity {
+	cursor: help;
+}
+
+.comment-form {
+	margin: 41px 0 0 0;
+}
+.comment-form textarea {
+	width: 100%;
+	max-width: 512px;
+	height: 128px;
+	padding: 12px 15px;
+	background-color: rgb(245, 247, 248);
+	box-shadow:
+        inset 0 0 6px 1px rgba(0, 0, 0, 0.04),
+        2px 1px 8px 2px rgba(1, 1, 1, 0.0092),
+        0 2px 100px 0 rgba(0, 0, 0, 0.006);
+	border-radius: 6px;
+	font-size: 16px;
+	resize: none;
+	outline: 0;
+}
+.comment-form input[type="text"] {
+	width: 100%;
+	max-width: 320px;
+	margin-bottom: 12px;
+	padding: 7px 15px;
+	background-color: rgb(245, 247, 248);
+	box-shadow:
+        inset 0 0 6px 1px rgba(0, 0, 0, 0.04),
+        2px 1px 8px 2px rgba(1, 1, 1, 0.0092),
+        0 2px 100px 0 rgba(0, 0, 0, 0.006);
+	border-radius: 6px;
+	font-size: 16px;
+	outline: 0;
+}
+.comment-form button[type="submit"] {
+	margin-top: 22px;
+}
+
+/*
+ * @component post
+*/
+
+.post {
+
+}
+.post h1.title {
+    margin: 0 0 36px 0;
+    text-align: center;
+}
+.post span.meta {
+    margin: 0 auto 7px auto;
+    font-size: 14px;
 }
