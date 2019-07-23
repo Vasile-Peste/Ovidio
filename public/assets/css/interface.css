@@ -1394,8 +1394,8 @@ dl.list {
     text-transform: uppercase;
     font-weight: 400;
     font-size: 16px;
-    letter-spacing: 0.03rem;
-    color: rgba(58, 57, 58, 0.99);
+    letter-spacing: 0.02rem;
+    color: rgba(78, 77, 78, 0.99);
 }
 /*
     .button::before {
@@ -1470,95 +1470,11 @@ a.button:hover {
     margin-top: 37px;
 }
 
-/*
- * @component wp-block-embed-youtube
-*/
-
-.wp-block-embed-youtube {
-	width: 100% !important;
-	margin: 26px 0 !important;
-}
-.wp-block-embed-youtube iframe[src^="https://www.youtube.com"] {
-	display: table !important;
-	width: 92% !important;
-	height: 360px !important;
-	margin: 0 auto !important;
-	padding: 0 !important;
-}
-
-/*
- * @component token
- * @desc prism.js
-*/
-
-.token.comment,
-.token.block-comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: #7D8B99;
-}
-.token.punctuation {
-	color: #5F6364;
-}
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.function-name,
-.token.constant,
-.token.symbol,
-.token.deleted {
-	color: #c92c2c;
-}
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.function,
-.token.builtin,
-.token.inserted {
-	color: #2f9c0a;
-}
-.token.operator,
-.token.entity,
-.token.url,
-.token.variable {
-	color: #a67f59;
-	background: rgba(255, 255, 255, 0.5);
-}
-.token.atrule,
-.token.attr-value,
-.token.keyword,
-.token.class-name {
-	color: #1990b8;
-}
-.token.regex,
-.token.important {
-	color: #e90;
-}
-.language-css .token.string,
-.style .token.string {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: rgb(166, 127, 89);
-}
-.token.important {
-	font-weight: normal;
-}
-.token.bold {
-	font-weight: 400;
-}
-.token.italic {
-	font-style: italic;
-}
-.token.entity {
-	cursor: help;
-}
-
 .comment-form {
 	margin: 41px 0 0 0;
 }
 .comment-form textarea {
+    transition: border-color 312ms;
 	width: 100%;
 	max-width: 512px;
 	height: 128px;
@@ -1568,12 +1484,15 @@ a.button:hover {
         inset 0 0 6px 1px rgba(0, 0, 0, 0.04),
         2px 1px 8px 2px rgba(1, 1, 1, 0.0092),
         0 2px 100px 0 rgba(0, 0, 0, 0.006);
+    border: 1px solid rgb(224, 224, 224);
 	border-radius: 6px;
-	font-size: 16px;
+    font-size: 16px;
+    color: rgba(28, 28, 28, 0.980968);
 	resize: none;
 	outline: 0;
 }
 .comment-form input[type="text"] {
+    transition: border-color 312ms;
 	width: 100%;
 	max-width: 320px;
 	margin-bottom: 12px;
@@ -1583,9 +1502,15 @@ a.button:hover {
         inset 0 0 6px 1px rgba(0, 0, 0, 0.04),
         2px 1px 8px 2px rgba(1, 1, 1, 0.0092),
         0 2px 100px 0 rgba(0, 0, 0, 0.006);
+    border: 1px solid rgb(224, 224, 224);
 	border-radius: 6px;
-	font-size: 16px;
+    font-size: 16px;
+    color: rgba(28, 28, 28, 0.980968);
 	outline: 0;
+}
+.comment-form textarea:focus,
+.comment-form input[type="text"]:focus {
+    border-color: rgb(194, 194, 194);
 }
 .comment-form button[type="submit"] {
 	margin-top: 22px;

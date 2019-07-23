@@ -2,10 +2,12 @@
 
 $css_url = WordPressUtilities::get_css_url();
 $js_url = WordPressUtilities::get_js_url();
+$theme = wp_get_theme();
 
 ?>
 <!DOCTYPE html>
 <html lang="<?php bloginfo("language"); ?>" dir="ltr">
+    <!-- Ovidio template version <?php echo $theme["Version"]; ?> written by Vasile Pește. -->
     <head>
         <meta charset="<?php bloginfo("charset"); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

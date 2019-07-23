@@ -1,0 +1,79 @@
+.wp-caption {
+    max-width: 100% !important;
+}
+
+.wp-block-embed-youtube {
+	width: 100% !important;
+	margin: 26px 0 !important;
+}
+.wp-block-embed-youtube iframe[src^="https://www.youtube.com"] {
+	display: table !important;
+	width: 92% !important;
+	height: 360px !important;
+	margin: 0 auto !important;
+	padding: 0 !important;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #7D8B99;
+}
+.token.punctuation {
+	color: #5F6364;
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #c92c2c;
+}
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.function,
+.token.builtin,
+.token.inserted {
+	color: #2f9c0a;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+	color: #a67f59;
+	background: rgba(255, 255, 255, 0.5);
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+	color: #1990b8;
+}
+.token.regex,
+.token.important {
+	color: #e90;
+}
+.language-css .token.string,
+.style .token.string {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(166, 127, 89);
+}
+.token.important {
+	font-weight: normal;
+}
+.token.bold {
+	font-weight: 400;
+}
+.token.italic {
+	font-style: italic;
+}
+.token.entity {
+	cursor: help;
+}
