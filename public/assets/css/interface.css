@@ -417,7 +417,13 @@ h2.title--no-separator::before {
         0 1px 8px 2px rgba(1, 1, 1, 0.0092);
     border-radius: 3px;
     font-family: "Courier";
+    font-size: 18px;
     color: rgba(41, 41, 41, 0.98);
+}
+.highlight > b,
+.highlight > strong {
+    font-family: inherit;
+    font-weight: bold;
 }
 
 /*
@@ -1165,7 +1171,7 @@ h2.title--no-separator::before {
     padding: 0;
 }
 .comment .paragraph {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /*
