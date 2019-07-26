@@ -16,6 +16,7 @@ $theme = wp_get_theme();
         <link rel="stylesheet" href="<?php echo $css_url; ?>/interface.css">
         <link rel="stylesheet" href="<?php echo $css_url; ?>/override.css">
 		<script type="text/javascript" src="<?php echo $js_url; ?>/prism.min.js" async></script>
+        <!-- <script type="text/javascript" src="<?php echo $js_url; ?>/ovidio.js"></script> -->
         <?php wp_head(); ?>
         <title><?php wp_title(); ?></title>
     </head>
@@ -51,7 +52,7 @@ $theme = wp_get_theme();
                 </p>
             </aside>
             <pre class="flex flex--full stream">
-                <span class="stream__text stream__text--repeat-y">
+                <span id="header-left-stream-text" class="stream__text stream__text--repeat-y">
                     /**
                      * sort Used to order an array of integers in ascending order (O(n)).
                      * @param {Array} arr

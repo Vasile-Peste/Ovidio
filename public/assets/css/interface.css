@@ -78,6 +78,15 @@
 .main * + .image {
     margin-top: 17px;
 }
+@media (max-width: 768px) {
+    .main {
+        padding: 48px 38px;
+    }
+    .main::before,
+    .main::after {
+        display: none;
+	}
+}
 
 /*
  * @component side-bar
@@ -581,7 +590,7 @@ h2.title--no-separator::before {
 .author {
     position: absolute;
     left: 0;
-    bottom: 146px;
+    bottom: 154px;
     margin: 0;
     padding: 20px;
     background-color: transparent;
@@ -627,9 +636,14 @@ h2.title--no-separator::before {
         max-width: 446px;
     }
 }
+@media (max-width: 768px) {
+	.author {
+		bottom: 112px;
+	}
+}
 @media (max-width: 407px) {
 	.author {
-		bottom: 79px;
+		bottom: 100px;
 	}
 }
 
