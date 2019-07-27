@@ -428,9 +428,9 @@ h2.title--no-separator::before {
     font-family: "Courier";
     font-size: 18px;
     color: rgba(41, 41, 41, 0.98);
+    white-space: nowrap;
 }
-.highlight > b,
-.highlight > strong {
+.highlight * {
     font-family: inherit;
     font-weight: bold;
 }
