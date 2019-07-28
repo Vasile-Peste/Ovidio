@@ -1,4 +1,5 @@
-(function (w, d, undefined) {
+// Work in progress.
+/* (function (w, d, undefined) {
     function appendCode () {
         var headerLeftStreamText = d.getElementById("header-left-stream-text");
         var codeSnippets = d.querySelectorAll(".post pre code");
@@ -32,4 +33,4 @@
     }
 
     window.addEventListener("DOMContentLoaded", appendCode);
-})(window, window.document);
+})(window, window.document);*/

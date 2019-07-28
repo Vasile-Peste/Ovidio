@@ -627,6 +627,7 @@ h2.title--no-separator::before {
 @media (max-width: 952px) {
     .author {
         flex-direction: column;
+        flex-flow: column;
         bottom: 92px;
     }
     .author > .image {
