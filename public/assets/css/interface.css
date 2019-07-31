@@ -623,6 +623,12 @@ h2.title--no-separator::before {
         0 0 20px rgb(0, 0, 0);
     line-height: 23px;
     color: rgb(234, 234, 234);
+    /* Use this only if you have the twitter follow button in this paragraph. */
+	transform: translateY(-10px);
+}
+.author .twitter-follow-button {
+	position: absolute !important;
+	transform: translateY(5px) !important;
 }
 @media (max-width: 952px) {
     .author {
@@ -867,6 +873,9 @@ h2.title--no-separator::before {
         0 0 8px 0 rgb(0, 0, 0),
         0 0 14px 0 rgb(0, 0, 0),
         0 0 20px 0 rgb(0, 0, 0);
+}
+.footer .twitter-follow-button {
+    margin-bottom: 1px;
 }
 .footer *::selection {
     background-color: highlight;
@@ -1186,6 +1195,9 @@ h2.title--no-separator::before {
 .comment .paragraph {
     font-size: 18px;
 }
+.comment + .comment-form {
+    margin-top: 41px;
+}
 
 /*
  * @component pagination
@@ -1330,13 +1342,13 @@ h2.title--no-separator::before {
     margin-top: 7px;
 }
 ul.list {
-    
+    /* Silence is golden. */
 }
 ol.list {
-    
+    /* Silence is golden. */
 }
 dl.list {
-    
+    /* Silence is golden. */
 }
 .list--none {
     margin: 17px 0;
@@ -1490,7 +1502,7 @@ a.button:hover {
 }
 
 .comment-form {
-	margin: 41px 0 0 0;
+	margin: 0;
 }
 .comment-form textarea {
     transition: border-color 312ms;
@@ -1540,7 +1552,7 @@ a.button:hover {
 */
 
 .post {
-
+    /* Silence is golden. */
 }
 .post h1.title {
     margin: 0 0 36px 0;

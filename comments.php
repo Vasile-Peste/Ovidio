@@ -23,15 +23,15 @@ $comments = get_comments([
 	<form action="<?php echo home_url(); ?>/wp-comments-post.php" method="post" class="flex flex--full comment-form">
 		<?php if (!is_user_logged_in()): ?>
 		<div class="flex flex--full">
-			<input type="text" name="author" placeholder="Name">
+			<input type="text" name="author" placeholder="<?php _e("Name"); ?>">
 		</div>
 		<div class="flex flex--full">
-			<input type="text" name="email" placeholder="Email">
+			<input type="text" name="email" placeholder="<?php _e("Email"); ?>">
 		</div>
 		<?php endif; ?>
 		
 		<div class="flex flex--full">
-			<textarea name="comment" placeholder="Comment"></textarea>
+			<textarea name="comment" placeholder="<?php _e("Your thoughts"); ?>"></textarea>
 		</div>
 		<div class="flex flex--full">
 			<button type="submit" class="button button--rounded"><?php _e("Post Comment"); ?></button>

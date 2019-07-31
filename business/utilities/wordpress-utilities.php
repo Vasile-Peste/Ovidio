@@ -1,16 +1,25 @@
 <?php
 
 class WordPressUtilities {
-    public static function get_post_first_paragraph (bool $strip = true, int $max = 200): string {
+    public static function get_post_first_paragraph (int $max = 200): string {
         $content = get_the_content();
+        $first_paragraph_start_position = strpos($content, "<p>");
+        // "<p>".length = 3
+        $second_paragraph_start_position = strpos($content, "<p>", $first_paragraph_start_position + 3);
 
-        if (!strpos($content, "</p>")) {
+        if (!$first_paragraph_start_position) {
             return false;
         }
 
-        $paragraph = substr($content, 0, strpos($content, "</p>"));
+        $paragraph = substr($content, $first_paragraph_start_position, strpos($content, "</p>"));
+        $paragraph = strip_tags($paragraph);
 
-        if ($strip) {
+        if (strpos($paragraph, "TL;DR:") === 0) {
+            if (!$second_paragraph_start_position) {
+                return false;
+            }
+
+            $paragraph = substr($content, $second_paragraph_start_position, strpos($content, "</p>"));
             $paragraph = strip_tags($paragraph);
         }
 
@@ -18,6 +27,8 @@ class WordPressUtilities {
             $paragraph = substr($paragraph, 0, $max);
         }
 
+        $paragraph = trim($paragraph);
+        $paragraph = trim($paragraph, ":;");
         $last_element = substr($paragraph, -1);
 
         if (!in_array($last_element, array(".", "!", "?"), true)) {
