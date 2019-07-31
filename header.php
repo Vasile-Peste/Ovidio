@@ -48,7 +48,8 @@ $theme = wp_get_theme();
                 <p class="paragraph">
                     «I'm Vasile Pește,<br>
                     I study how information is represented and manipulated,<br>
-                    I share ideas with the world.»
+                    I share ideas with the world.»<br>
+                    <a class="twitter-follow-button" href="https://twitter.com/vasile_peste">Follow @vasile_peste</a>
                 </p>
             </aside>
             <pre class="flex flex--full stream">
