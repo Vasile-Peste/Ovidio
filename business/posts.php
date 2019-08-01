@@ -10,7 +10,7 @@
     </p>
     <?php endif; ?>
     <div class="flex flex--full flex--center">
-        <a href="<?php the_permalink(); ?>" class="button button--rounded"><?php _e("Read post"); ?></a>
+        <a href="<?php the_permalink(); ?>" class="button button--rounded"><?php _e("Read post"); ?> →</a>
     </div>
 </div>
 <!-- / Post Preview -->
