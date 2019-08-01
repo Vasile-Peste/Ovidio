@@ -58,3 +58,8 @@ img {
 main > div:first-child {
     z-index: 2048;
 }
+
+input {
+    -webkit-appearance: none;
+    appearance: none;
+}

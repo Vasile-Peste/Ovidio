@@ -6,25 +6,25 @@ add_action("widgets_init", function () {
     register_sidebar([
         "id" => "before-post",
         "name" => "Before Posts Widget",
-        "description" => __("Widgets placed before every post", "text_domain") . ".",
+        "description" => __("Widget placed before every post", "text_domain") . ".",
     ]);
     
     register_sidebar([
         "id" => "after-post",
         "name" => "After Posts Widget",
-        "description" => __("Widgets placed after every post", "text_domain") . ".",
+        "description" => __("Widget placed after every post", "text_domain") . ".",
     ]);
     
     register_sidebar([
         "id" => "before-footer",
         "name" => "Before Footer Widget",
-        "description" => __("Widgets placed before the footer", "text_domain") . ".",
+        "description" => __("Widget placed before the footer", "text_domain") . ".",
     ]);
     
     register_sidebar([
         "id" => "after-footer",
         "name" => "After Footer Widget",
-        "description" => __("Widgets placed after the footer", "text_domain") . ".",
+        "description" => __("Widget placed after the footer", "text_domain") . ".",
     ]);
 });
 
@@ -48,6 +48,16 @@ function comment_form_disable_comment_url ($fields) {
 	return $fields;
 }
 
-add_filter("comment_form_default_fields", "comment_form_disable_comment_url");
+function disable_emoji_icons () {
+    remove_action("admin_print_styles", "print_emoji_styles");
+    remove_action("wp_head", "print_emoji_detection_script", 7);
+    remove_action("admin_print_scripts", "print_emoji_detection_script");
+    remove_action("wp_print_styles", "print_emoji_styles");
+    remove_filter("wp_mail", "wp_staticize_emoji_for_email");
+    remove_filter("the_content_feed", "wp_staticize_emoji");
+    remove_filter("comment_text_rss", "wp_staticize_emoji");
+}
 
+add_action("init", "disable_emoji_icons");
+add_filter("comment_form_default_fields", "comment_form_disable_comment_url");
 show_admin_bar(false);

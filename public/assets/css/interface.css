@@ -371,9 +371,6 @@ h2.title--no-separator::before {
     font-weight: 400;
     color: rgba(21, 21, 21, 0.91);
 }
-.post .meta {
-    text-transform: uppercase;
-}
 
 /*
  * @component separator
@@ -630,6 +627,9 @@ h2.title--no-separator::before {
 	position: absolute !important;
 	transform: translateY(5px) !important;
 }
+.author a.twitter-follow-button {
+    display: none !important;
+}
 @media (max-width: 952px) {
     .author {
         flex-direction: column;
@@ -877,6 +877,9 @@ h2.title--no-separator::before {
 .footer .twitter-follow-button {
     margin-bottom: 1px;
 }
+.footer a.twitter-follow-button {
+    display: none !important;
+}
 .footer *::selection {
     background-color: highlight;
     text-shadow: none;
@@ -1106,6 +1109,26 @@ h2.title--no-separator::before {
 }
 
 /*
+ * @component suggested-post
+*/
+
+.suggested-post {
+    
+}
+.suggested-post p {
+    margin: 0;
+}
+.suggested-post a {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    letter-spacing: -0.058rem;
+    line-height: 39px;
+    font-size: 29px;
+    color: rgba(18, 18, 18, 0.91);
+}
+
+/*
  * @component comment
  * @example
  * <div class="flex flex--full flex--vertical comment">
@@ -1189,11 +1212,13 @@ h2.title--no-separator::before {
         0 2px 50px 0 rgba(0, 0, 0, 0.1);
 }
 .comment .meta {
-    margin: 0 0 2px 0;
+    margin: 0 0 4px 0;
     padding: 0;
+    font-size: 16px;
 }
 .comment .paragraph {
     font-size: 18px;
+    line-height: 24px;
 }
 .comment + .comment-form {
     margin-top: 41px;
@@ -1415,6 +1440,8 @@ dl.list {
 */
 
 .button {
+    -webkit-user-select: none;
+    user-select: none;
     transition: 212ms background-color, 216ms color;
     cursor: pointer;
     position: relative;
@@ -1554,11 +1581,12 @@ a.button:hover {
 .post {
     /* Silence is golden. */
 }
-.post h1.title {
+.post > h1.title {
     margin: 0 0 36px 0;
     text-align: center;
 }
-.post span.meta {
+.post > aside:first-child > span.meta {
     margin: 0 auto 7px auto;
     font-size: 14px;
+    text-transform: uppercase;
 }

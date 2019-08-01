@@ -7,7 +7,7 @@ $theme = wp_get_theme();
 ?>
 <!DOCTYPE html>
 <html lang="<?php bloginfo("language"); ?>" dir="ltr">
-    <!-- Ovidio template version <?php echo $theme["Version"]; ?> written by Vasile Pește. -->
+    <!-- Ovidio version <?php echo $theme["Version"]; ?>. Designed by Vasile Pește. -->
     <head>
         <meta charset="<?php bloginfo("charset"); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,11 +49,11 @@ $theme = wp_get_theme();
                     «I'm Vasile Pește,<br>
                     I study how information is represented and manipulated,<br>
                     I share ideas with the world.»<br>
-                    <a class="twitter-follow-button" href="https://twitter.com/vasile_peste">Follow @vasile_peste</a>
+                    <a class="twitter-follow-button" href="https://twitter.com/vasile_peste" rel="nofollow">Follow @vasile_peste</a>
                 </p>
             </aside>
             <pre class="flex flex--full stream">
-                <span id="header-left-stream-text" class="stream__text stream__text--repeat-y">
+                <code id="header-left-stream-text" class="stream__text stream__text--repeat-y">
                     /**
                      * sort Used to order an array of integers in ascending order (O(n)).
                      * @param {Array} arr
@@ -71,8 +71,8 @@ $theme = wp_get_theme();
                             setTimeout(() => resolve(sorted), arr.reduce((a, b) => a + b, 0) + 1);
                         });
                     }
-                </span>
-                <span class="stream__text stream__text--repeat-y stream__text--reverse">
+                </code>
+                <code class="stream__text stream__text--repeat-y stream__text--reverse">
                     «Nullam elementum blandit molestie.
                     Aenean condimentum lectus ut felis.
                     Phasellus fringilla nisl tincidunt dolor.»
@@ -83,7 +83,7 @@ $theme = wp_get_theme();
                     
                     «Nullam lobortis turpis a tempor molestie.
                     Maecenas fringilla nisl at malesuada porta.»
-                </span>
+                </code>
             </pre>
         </header>
         <main class="flex flex--full">

@@ -6,6 +6,7 @@
     <h1 class="title"><?php the_title(); ?></h1>
     <?php the_content(); ?>
     <?php dynamic_sidebar("after-post"); ?>
+    <?php require "template/suggested-post.php"; ?>
 	<?php comments_template(); ?>
 </article>
 <?php get_sidebar(); ?>
