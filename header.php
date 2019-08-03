@@ -1,36 +1,32 @@
 <?php
-
-$css_url = WordPressUtilities::get_css_url();
-$js_url = WordPressUtilities::get_js_url();
+$css_directory_uri = WordPressUtilities::get_css_url();
+$js_directory_uri = WordPressUtilities::get_js_url();
 $theme = wp_get_theme();
-
 ?>
 <!DOCTYPE html>
 <html lang="<?php bloginfo("language"); ?>" dir="ltr">
-    <!-- Ovidio version <?php echo $theme["Version"]; ?>. Designed by Vasile Pește. -->
+    <!-- Ovidio version <?php echo $theme["Version"]; ?>. -->
+    <!-- Designed by Vasile Pește. -->
     <head>
         <meta charset="<?php bloginfo("charset"); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="<?php echo $css_url; ?>/box-model.css">
-        <link rel="stylesheet" href="<?php echo $css_url; ?>/global.css">
-        <link rel="stylesheet" href="<?php echo $css_url; ?>/interface.css">
-        <link rel="stylesheet" href="<?php echo $css_url; ?>/override.css">
-		<script type="text/javascript" src="<?php echo $js_url; ?>/prism.min.js" async></script>
-        <!-- <script type="text/javascript" src="<?php echo $js_url; ?>/ovidio.js"></script> -->
+        <link rel="stylesheet" href="<?php echo $css_directory_uri; ?>/box-model.css">
+        <link rel="stylesheet" href="<?php echo $css_directory_uri; ?>/global.css">
+        <link rel="stylesheet" href="<?php echo $css_directory_uri; ?>/interface.css">
+        <link rel="stylesheet" href="<?php echo $css_directory_uri; ?>/override.css">
+		<script type="text/javascript" src="<?php echo $js_directory_uri; ?>/prism.min.js" async></script>
+        <!-- <script type="text/javascript" src="<?php echo $js_directory_uri; ?>/ovidio.js"></script> -->
         <?php wp_head(); ?>
         <title><?php wp_title(); ?></title>
     </head>
     <body class="flex flex--full">
         <header class="flex flex--full header header--triangle">
             <div class="flex flex--full container">
+                <!-- Header Menu -->
                 <nav class="flex flex--full flex--vertical nav">
                     <!-- Left Layout -->
                     <div class="flex flex--semi">
-                        <?php
-
-                        $menu = wp_get_nav_menu_object(get_nav_menu_locations()["header_left_column"]);
-                        
-                        ?>
+                        <?php $menu = wp_get_nav_menu_object(get_nav_menu_locations()["header_left_column"]); ?>
                         <?php if ($menu): foreach (wp_get_nav_menu_items($menu -> term_id) as $item): ?>
                         <a href="<?php echo $item -> url; ?>" class="nav__item"><?php echo $item -> title; ?></a>
                         <?php endforeach; endif; ?>
@@ -42,14 +38,15 @@ $theme = wp_get_theme();
                     </div>
                     <!-- / Right Layout -->
                 </nav>
+                <!-- / Header Menu -->
             </div>
             <aside class="flex flex--full flex--center flex--vertical author">
-                <img src="https://www.malgol.com/wp-content/uploads/2019/01/me.jpg" alt="" class="image">
+                <img src="" alt="" class="image">
                 <p class="paragraph">
                     «I'm Vasile Pește,<br>
                     I study how information is represented and manipulated,<br>
                     I share ideas with the world.»<br>
-                    <a class="twitter-follow-button" href="https://twitter.com/vasile_peste" rel="nofollow">Follow @vasile_peste</a>
+                    <a href="https://twitter.com/vasile_peste" rel="nofollow" class="twitter-follow-button">Follow @vasile_peste</a>
                 </p>
             </aside>
             <pre class="flex flex--full stream">

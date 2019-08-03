@@ -1,7 +1,6 @@
 # Ovidio for WordPress
-Ovidio is an authentic WordPress theme designed from scratch and with zero dependencies.
-Originally designed for my website about information technology and programming, and
-now available open source.
+Ovidio is a WordPress theme designed from scratch with zero dependencies.
+Originally designed for my website, a blog about information technology and programming, now available open source.
 
 ## Preview
 Live preview is available by just visiting my website: [www.malgol.com](https://www.malgol.com/).
@@ -11,7 +10,7 @@ Do not hesitate to create an issue even for the most irrelevant thing: feel free
 
 ## Design
 Each class in this project is considered and referenced as a unique UI component (in all style sheets and in all commit messages). All class names are following and must follow the BEM convention. All properties are not vendor prefixed in order to maintain the code clean and readable, they should be automatically vendor prefixed before going in production. I think
-I am going to use SASS but in the future.
+I am going to use SASS but I don't know when.
 
 ## Credits
 Author: Vasile Pește (vasile.peste@protonmail.ch).

@@ -1,6 +1,9 @@
 <?php
+require_once "utilities/wordpress_utilities.php";
 
-require_once "business/utilities/wordpress-utilities.php";
+function render (string $template_file_name): void {
+    require "template/" . $template_file_name . ".php";
+}
 
 add_action("widgets_init", function () {
     register_sidebar([
@@ -26,6 +29,12 @@ add_action("widgets_init", function () {
         "name" => "After Footer Widget",
         "description" => __("Widget placed after the footer", "text_domain") . ".",
     ]);
+
+    register_sidebar([
+        "id" => "body-end",
+        "name" => "End of body Widget",
+        "description" => __("Widget placed right before the end of the body tag", "text_domain") . ".",
+    ]);
 });
 
 add_action("after_setup_theme", function () {
@@ -48,7 +57,7 @@ function comment_form_disable_comment_url ($fields) {
 	return $fields;
 }
 
-function disable_emoji_icons () {
+function disable_emoji_icons (): void {
     remove_action("admin_print_styles", "print_emoji_styles");
     remove_action("wp_head", "print_emoji_detection_script", 7);
     remove_action("admin_print_scripts", "print_emoji_detection_script");

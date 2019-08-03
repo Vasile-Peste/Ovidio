@@ -1,9 +1,7 @@
 <?php
-
 $comments = get_comments([
 	"post_id" => get_the_ID(),
 ]);
-
 ?>
 <hr class="flex flex--full separator">
 <aside class="flex flex--full comments">
@@ -19,7 +17,8 @@ $comments = get_comments([
         </div>
     </div>
 	<?php endforeach; endif; ?>
-	<?php if (comments_open()): endif; ?>
+	<!--
+	<?php if (comments_open() && is_admin()): endif; ?>
 	<form action="<?php echo home_url(); ?>/wp-comments-post.php" method="post" class="flex flex--full comment-form">
 		<?php if (!is_user_logged_in()): ?>
 		<div class="flex flex--full">
@@ -40,6 +39,7 @@ $comments = get_comments([
 		<input type="hidden" name="comment_post_ID" value="<?php echo get_the_ID(); ?>" id="comment_post_ID">
 		<input type="hidden" name="comment_parent" id="comment_parent" value="0">
 	</form>
+	-->
 	<!--
 		<div class="flex flex--full flex--center flex--vertical pagination">
 			<a href="" class="link">1</a>

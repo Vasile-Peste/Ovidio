@@ -3,11 +3,11 @@
 <footer class="flex flex--full flex--center footer footer--triangle">
     <?php dynamic_sidebar("before-footer"); ?>
     <div class="flex container">
-        <?php require "template/footer/menu.php"; ?>
+        <?php render("footer/menu"); ?>
     </div>
     <pre class="flex flex--full stream">
         <code class="stream__text stream__text--repeat-y-2">
-			<a class="twitter-follow-button" href="https://twitter.com/vasile_peste" rel="nofollow">Follow @vasile_peste</a>
+			<a href="https://twitter.com/vasile_peste" rel="nofollow" class="twitter-follow-button">Follow @vasile_peste</a>
                     &copy; 2018-2019 Designed by Vasile Pește.
         </code>
         <code class="stream__text stream__text--repeat-y-2 stream__text--reverse-2">
@@ -40,5 +40,6 @@
     <?php dynamic_sidebar("after-footer"); ?>
 </footer>
 <?php wp_footer(); ?>
+<?php dynamic_sidebar("body-end"); ?>
 </body>
 </html>

@@ -63,3 +63,8 @@ input {
     -webkit-appearance: none;
     appearance: none;
 }
+
+a {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}

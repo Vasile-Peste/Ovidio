@@ -1,5 +1,4 @@
 <?php
-
 class WordPressUtilities {
     public static function get_post_first_paragraph (int $max = 200): string {
         $content = get_the_content();
