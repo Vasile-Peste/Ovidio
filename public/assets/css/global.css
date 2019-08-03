@@ -34,7 +34,7 @@ main {
 	background-color: rgb(252, 252, 252);
 }
 main > div:first-child {
-    background-color: rgb(252, 252, 252);
+    background-color: transparent;
     z-index: 2048;
 }
 
