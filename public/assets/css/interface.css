@@ -1,22 +1,4 @@
 /*
- * @modifier invisible
-*/
-
-.--invisible {
-    display: none;
-}
-
-/*
- * @modifier no-select
- * @desc Makes an element unselectable.
-*/
-
-.--unselectable {
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-/*
  * @component container
  * @desc A generic container: it should be overwritten by other UI components for specific cases.
 */
@@ -305,6 +287,11 @@ h1.title + .paragraph,
 .post h1 + p {
     margin-top: 12px;
 }
+h1.title + img,
+h1.title + figure,
+h1.title + figure > img:first-child {
+    margin-top: 0;
+}
 h2.title,
 .post h2 {
     margin-bottom: 3px;
@@ -385,6 +372,10 @@ h2.title--no-separator::before {
     background-color: transparent;
     border: none;
     border-top: 1px dashed rgba(200, 200, 200, 0.68);
+}
+.separator--no-margin-bottom,
+.post hr.separator--no-margin-bottom {
+    margin-bottom: 0;
 }
 
 /*
@@ -496,21 +487,6 @@ h2.title--no-separator::before {
 .header .stream__text {
     opacity: 0.42;
 }
-.header--terminator {
-    background-image:
-        linear-gradient(
-            -182deg,
-            rgba(0, 0, 0, 0.83) 70%,
-            rgba(43, 43, 43, 0.04)
-        ),
-        url("../images/terminator.jpg");
-    background-size:
-        auto,
-        auto 100%;
-    background-repeat:
-        repeat,
-        no-repeat;
-}
 .header--triangle::after {
     content: "";
     position: absolute;
@@ -537,9 +513,6 @@ h2.title--no-separator::before {
     border-right: 50vw solid transparent;
     border-bottom: 30px solid rgb(252, 252, 252);
     z-index: 1;
-}
-.header--machine {
-    
 }
 .header--machine > .stream > .stream__text:nth-child(1),
 .header--machine > .stream > .stream__text:nth-child(2) {
@@ -621,6 +594,7 @@ h2.title--no-separator::before {
         0 0 14px rgb(0, 0, 0),
         0 0 20px rgb(0, 0, 0);
     line-height: 23px;
+    letter-spacing: 0.0001rem;
     color: rgb(234, 234, 234);
     /* Use this only if you have the twitter follow button in this paragraph. */
 	transform: translateY(-10px);
@@ -1587,9 +1561,6 @@ a.button:hover {
  * @component post
 */
 
-.post {
-    /* Silence is golden. */
-}
 .post > h1.title {
     margin: 0 0 36px 0;
     text-align: center;

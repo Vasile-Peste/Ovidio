@@ -33,6 +33,10 @@ body {
 main {
 	background-color: rgb(252, 252, 252);
 }
+main > div:first-child {
+    background-color: rgb(252, 252, 252);
+    z-index: 2048;
+}
 
 b,
 strong {
@@ -55,10 +59,6 @@ img {
     max-width: 100%;
 }
 
-main > div:first-child {
-    z-index: 2048;
-}
-
 input {
     -webkit-appearance: none;
     appearance: none;
@@ -67,4 +67,8 @@ input {
 a {
     -ms-word-wrap: break-word;
     word-wrap: break-word;
+}
+
+svg {
+    shape-rendering: geometricPrecision !important;
 }

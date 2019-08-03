@@ -7,7 +7,6 @@
     <?php the_content(); ?>
     <?php dynamic_sidebar("after-post"); ?>
     <?php render("post_suggested"); ?>
-	<?php comments_template(); ?>
 </article>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

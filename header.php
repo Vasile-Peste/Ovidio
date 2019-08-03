@@ -41,7 +41,7 @@ $theme = wp_get_theme();
                 <!-- / Header Menu -->
             </div>
             <aside class="flex flex--full flex--center flex--vertical author">
-                <img src="" alt="" class="image">
+                <img src="https://www.malgol.com/wp-content/uploads/2019/08/vasile.jpg" alt="" class="image">
                 <p class="paragraph">
                     «I'm Vasile Pește,<br>
                     I study how information is represented and manipulated,<br>

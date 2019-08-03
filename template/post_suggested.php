@@ -23,3 +23,4 @@ $suggested_post_title = $suggested_post -> post_title;
     </div>
 </aside>
 <!-- / Post Suggested -->
+<hr class="flex flex--full separator separator--no-margin-bottom">

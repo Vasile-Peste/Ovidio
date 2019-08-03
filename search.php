@@ -1,6 +1,7 @@
 <?php get_header(); ?>
+<?php $search_query = get_search_query(); ?>
 <div class="main">
-	<h1 class="title"><?php _e("Search results for"); ?> «<?php echo get_search_query(); ?>»</h1>
+	<h1 class="title"><?php _e("Search results for"); ?> «<?php echo $search_query; ?>»</h1>
 	<hr class="flex flex--full separator">
     <?php render("posts"); ?>
 </div>
