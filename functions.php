@@ -1,7 +1,7 @@
 <?php
 require_once "utilities/wordpress_utilities.php";
 
-function render (string $template_file_name): void {
+function render (string $template_file_name) {
     require "template/" . $template_file_name . ".php";
 }
 
@@ -57,7 +57,7 @@ function comment_form_disable_comment_url ($fields) {
 	return $fields;
 }
 
-function disable_emoji_icons (): void {
+function disable_emoji_icons () {
     remove_action("admin_print_styles", "print_emoji_styles");
     remove_action("wp_head", "print_emoji_detection_script", 7);
     remove_action("admin_print_scripts", "print_emoji_detection_script");
