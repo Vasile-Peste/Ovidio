@@ -594,7 +594,7 @@ h2.title--no-separator::before {
         0 0 14px rgb(0, 0, 0),
         0 0 20px rgb(0, 0, 0);
     line-height: 23px;
-    letter-spacing: 0.0001rem;
+    letter-spacing: -0.007rem;
     color: rgb(234, 234, 234);
     /* Use this only if you have the twitter follow button in this paragraph. */
 	transform: translateY(-10px);
@@ -799,7 +799,7 @@ h2.title--no-separator::before {
         0 0 8px rgb(0, 0, 0),
         0 0 14px rgb(0, 0, 0),
         0 0 20px rgb(0, 0, 0);
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
     color: rgb(181, 181, 181);
 }
 .footer h4.title {
