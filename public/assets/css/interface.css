@@ -446,6 +446,7 @@ h2.title--no-separator::before {
     margin: 0 auto;
 }
 .header > .container > .nav {
+    margin-top: 2px;
     background-color: rgb(0, 0, 0);
 }
 /* Used for the fade-in effect of .stream. */
@@ -562,7 +563,7 @@ h2.title--no-separator::before {
 .author {
     position: absolute;
     left: 0;
-    bottom: 154px;
+    bottom: 156px;
     margin: 0;
     padding: 20px;
     background-color: transparent;
