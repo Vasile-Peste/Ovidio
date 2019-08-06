@@ -20,11 +20,11 @@
     padding: 48px 62px;
     background-color: rgb(255, 255, 255);
     background-image: radial-gradient(rgb(255, 255, 255), rgb(251, 251, 251));
+    box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.02);
 }
 .main,
 .main::before,
 .main::after {
-    box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.06);
     border: 1px solid rgb(224, 224, 224);
 }
 .main::before,
@@ -40,6 +40,7 @@
     transform: rotate(-2deg);
     z-index: -1;
     background-color: rgb(253, 253, 253);
+    box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.06);
 }
 .main::after {
     right: -5px;
@@ -47,6 +48,7 @@
     transform: rotate(2.5deg);
     z-index: -2;
     background-color: rgb(251, 251, 251);
+    box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.04);
 }
 .main--expanded {
     max-width: 883px;
@@ -446,7 +448,7 @@ h2.title--no-separator::before {
     margin: 0 auto;
 }
 .header > .container > .nav {
-    margin-top: 2px;
+    margin-top: 1px;
     background-color: rgb(0, 0, 0);
 }
 /* Used for the fade-in effect of .stream. */
@@ -485,8 +487,8 @@ h2.title--no-separator::before {
 .header > .stream > .stream__text:nth-child(2) {
     right: 63px;
 }
-.header .stream__text {
-    opacity: 0.42;
+.header > .stream > .stream__text {
+    opacity: 0.32;
 }
 .header--triangle::after {
     content: "";
