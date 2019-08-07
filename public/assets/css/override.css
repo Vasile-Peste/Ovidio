@@ -14,6 +14,21 @@
 	padding: 0 !important;
 }
 
+.wp-block-video {
+	width: 90% !important;
+	margin: 20px auto !important;
+	padding: 0 !important;
+}
+.wp-block-video > video {
+	border: 1px solid rgba(0, 0, 0, 0.0893333) !important;
+	border-radius: 6px !important;
+}
+.wp-block-video,
+.wp-block-video > video {
+	-webkit-user-select: none;
+	user-select: none;
+}
+
 .token.comment,
 .token.block-comment,
 .token.prolog,
